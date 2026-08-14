@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "node --test tests/brand-logo.test.ts tests/client-logo.test.ts tests/site-content.test.ts tests/contact-form.test.ts tests/field-photo-gallery.test.ts tests/field-photo-placement.test.ts tests/field-photo-sections.test.ts"
+    "test": "node --test tests/brand-logo.test.ts tests/client-logo.test.ts tests/site-content.test.ts tests/contact-form.test.ts tests/field-photo-gallery.test.ts tests/field-photo-placement.test.ts tests/field-photo-sections.test.ts tests/gallery-lightbox.test.ts"
   },
   "dependencies": {
     "clsx": "^2.1.1",
