@@ -84,7 +84,7 @@ export function Navbar() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <a
-            href="/brochure/"
+            href="/brochure/index.html"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 rounded-full border border-white/25 px-4 py-2.5 text-sm font-semibold text-white/90 transition-all hover:-translate-y-0.5 hover:border-white/50 hover:text-white"
@@ -136,7 +136,7 @@ export function Navbar() {
                 </Link>
               ))}
               <a
-                href="/brochure/"
+                href="/brochure/index.html"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-2 flex items-center justify-center gap-1.5 rounded-lg border border-white/20 px-4 py-3 text-center text-sm font-semibold text-white/85"
