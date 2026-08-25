@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local credentials (do not commit)
+.superpowers/brainstorm/.last-token
+.superpowers/brainstorm/.last-port
+.claude/settings.local.json

@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PRO INGEMA S.A.C. — Sitio web corporativo
 
-## Getting Started
+Sitio web institucional de **PRO INGEMA S.A.C.** (Profesional en Ingeniería,
+Geotecnia y Materiales S.A.C.), empresa cusqueña especializada en ingeniería
+geotécnica, estudios de suelos, geología, estudios ambientales y laboratorio
+de materiales.
 
-First, run the development server:
+## Stack tecnológico
+
+- **Next.js 16** (App Router, React 19, TypeScript)
+- **Tailwind CSS v4** — tokens de marca definidos en `app/globals.css`
+- **Framer Motion** — animaciones de entrada, scroll reveal, contadores
+- **Lucide React** — iconografía
+- **next/image** — optimización de imágenes
+
+## Requisitos previos
+
+- Node.js 20 o superior
+- npm 10 o superior
+
+## Instalación
+
+```bash
+npm install
+```
+
+## Desarrollo
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build de producción
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+## Estructura del proyecto
 
-To learn more about Next.js, take a look at the following resources:
+```
+app/
+  layout.tsx            Layout raíz (fuentes, Navbar, Footer, WhatsApp)
+  page.tsx               Inicio
+  nosotros/               Historia, misión, visión, valores, equipo
+  servicios/              Catálogo de servicios de ingeniería
+  geotecnia/              Ensayos de campo
+  laboratorio/            Laboratorio de suelos, concreto y asfalto
+  proyectos/              Portafolio filtrable de proyectos
+  clientes/               Clientes institucionales + carrusel
+  galeria/                Galería masonry filtrable
+  blog/                   Artículos técnicos y noticias
+  contacto/               Formulario, WhatsApp, mapa y datos de contacto
+  sitemap.ts / robots.ts  SEO técnico
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+components/
+  layout/                 Navbar, Footer, WhatsAppButton
+  ui/                     Button, Container, SectionHeading, PageHero,
+                          BrandImage (placeholder/foto), Reveal, AnimatedCounter
+  home/                   Secciones exclusivas del Inicio
+  sections/               Secciones reutilizables entre páginas
+                          (CTABanner, ClientsMarquee, ProjectsGrid, MasonryGallery, ContactForm)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+lib/
+  constants.ts            Datos de la empresa y navegación
+  data/                   Contenido estructurado (servicios, ensayos, proyectos,
+                          clientes, galería, blog, equipo)
+  resolve-image.ts        Resuelve fotos reales vs. placeholder de marca
+  utils.ts                Helper `cn` para clases condicionales
 
-## Deploy on Vercel
+public/images/
+  README.md               Guía de nombres de archivo por sección para
+                          reemplazar los placeholders por fotografías reales
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Reemplazo de imágenes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+El sitio se entrega con **placeholders de marca** (paneles con degradado,
+cuadrícula tipo plano de ingeniería e ícono) en cada lugar donde debe ir una
+fotografía real. Para reemplazarlos, sigue la guía en
+[`public/images/README.md`](public/images/README.md): basta con colocar el
+archivo con el nombre exacto indicado en la subcarpeta correspondiente — no
+se requiere tocar código.
+
+## Contenido editable
+
+Todo el contenido textual (servicios, ensayos, proyectos, clientes, galería,
+blog, equipo, datos de contacto) vive en `lib/data/*.ts` y `lib/constants.ts`,
+separado de los componentes visuales.
+
+## SEO
+
+- Metadata por página (`title`, `description`) vía `export const metadata`.
+- `app/sitemap.ts` y `app/robots.ts` generan `/sitemap.xml` y `/robots.txt`.
+- Open Graph configurado en `app/layout.tsx`.
+- Actualiza `SITE_URL` en `lib/constants.ts` con el dominio final antes de publicar.

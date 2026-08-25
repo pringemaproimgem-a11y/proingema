@@ -1,0 +1,37 @@
+
+> niki@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.10 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.1.9:3000
+✓ Ready in 895ms
+
+ GET / 200 in 1675ms (next.js: 453ms, application-code: 1222ms)
+ GET / 200 in 1312ms (next.js: 237ms, application-code: 1075ms)
+○ Compiling /_error ...
+ GET /_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1503387762-592deb58ef4e%3Fw%3D1200%26q%3D80&w=1200&q=75 500 in 3.8s (next.js: 3.7s, application-code: 46ms)
+ GET /_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1503387762-592deb58ef4e%3Fw%3D1200%26q%3D80&w=1200&q=75 500 in 3.8s (next.js: 3.7s, application-code: 47ms)
+✓ Compiled in 10.7s
+ GET / 500 in 10.6s (next.js: 810ms, application-code: 9.8s)
+ GET / 200 in 4.4s (next.js: 662ms, application-code: 3.7s)
+ GET / 200 in 3.1s (next.js: 20ms, application-code: 3.1s)
+ GET / 200 in 2.7s (next.js: 23ms, application-code: 2.7s)
+ GET / 200 in 2.7s (next.js: 521ms, application-code: 2.2s)
+ GET / 200 in 2.7s (next.js: 939ms, application-code: 1744ms)
+ GET / 200 in 2.7s (next.js: 1634ms, application-code: 1074ms)
+ GET / 200 in 6.5s (next.js: 4.2s, application-code: 2.3s)
+ GET / 200 in 6.4s (next.js: 4.8s, application-code: 1647ms)
+ GET / 200 in 6.4s (next.js: 5.2s, application-code: 1261ms)
+ GET / 200 in 6.6s (next.js: 3.8s, application-code: 2.8s)
+ GET / 200 in 6.4s (next.js: 5.4s, application-code: 1056ms)
+ GET / 200 in 6.4s (next.js: 5.7s, application-code: 715ms)
+ GET / 200 in 2.2s (next.js: 24ms, application-code: 2.1s)
+ GET / 200 in 2.2s (next.js: 889ms, application-code: 1269ms)
+ GET / 200 in 2.2s (next.js: 1268ms, application-code: 887ms)
+ GET / 200 in 2.2s (next.js: 404ms, application-code: 1759ms)
+ GET / 200 in 582ms (next.js: 23ms, application-code: 559ms)
+ GET / 200 in 586ms (next.js: 292ms, application-code: 294ms)
+ GET / 200 in 680ms (next.js: 8ms, application-code: 672ms)
+ GET / 200 in 683ms (next.js: 396ms, application-code: 286ms)
+ GET / 200 in 696ms (next.js: 197ms, application-code: 500ms)

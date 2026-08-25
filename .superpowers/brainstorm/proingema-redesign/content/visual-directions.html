@@ -1,0 +1,142 @@
+<style>
+  .directions-intro { max-width: 820px; margin-bottom: 28px; }
+  .direction-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; align-items: start; }
+  .direction-card { border: 1px solid #d8d3c9; border-radius: 18px; overflow: hidden; background: #fff; cursor: pointer; transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease; }
+  .direction-card:hover { transform: translateY(-4px); box-shadow: 0 20px 44px rgba(29,35,31,.13); }
+  .direction-card.selected { border-color: #159447; box-shadow: 0 0 0 3px rgba(21,148,71,.15), 0 20px 44px rgba(29,35,31,.13); }
+  .preview { height: 430px; position: relative; overflow: hidden; }
+  .preview-logo { width: 106px; height: auto; object-fit: contain; }
+  .preview-nav { position: absolute; left: 0; right: 0; top: 0; z-index: 4; display: flex; align-items: center; justify-content: space-between; padding: 14px 17px; }
+  .preview-nav-links { font: 600 7px/1.2 Arial, sans-serif; letter-spacing: .08em; text-transform: uppercase; display: flex; gap: 10px; }
+  .preview-chip { display: inline-flex; align-items: center; gap: 6px; padding: 7px 9px; border-radius: 999px; font: 700 7px/1 Arial, sans-serif; text-transform: uppercase; letter-spacing: .08em; }
+  .direction-body { padding: 18px 18px 20px; }
+  .direction-kicker { color: #148343; font-size: 11px; font-weight: 750; letter-spacing: .13em; text-transform: uppercase; }
+  .direction-body h3 { margin: 7px 0 7px; font-size: 19px; }
+  .direction-body p { margin: 0; color: #66655f; font-size: 13px; line-height: 1.52; }
+  .direction-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 13px; }
+  .direction-tags span { padding: 5px 8px; background: #f2f1ed; border-radius: 6px; font-size: 10px; color: #4e504c; }
+  .recommend { margin-left: 7px; padding: 4px 7px; color: #fff; background: #148343; border-radius: 5px; font-size: 9px; vertical-align: middle; }
+
+  .territory { background: #111713; color: #fff; }
+  .territory .preview-nav { background: linear-gradient(to bottom, rgba(12,18,14,.88), transparent); }
+  .territory .preview-logo { filter: drop-shadow(0 1px 4px rgba(255,255,255,.35)); background: rgba(255,255,255,.92); border-radius: 8px; padding: 5px; }
+  .territory .preview-nav-links { color: rgba(255,255,255,.78); }
+  .territory-hero { position:absolute; inset:0; background: linear-gradient(90deg, rgba(12,18,14,.94) 0%, rgba(12,18,14,.62) 51%, rgba(12,18,14,.12) 100%), url('/files/hero-calicates.jpg') center/cover; }
+  .territory-copy { position: absolute; z-index: 2; left: 20px; top: 104px; width: 72%; }
+  .territory-copy .eyebrow { color: #a7d64c; font: 700 8px/1 Arial, sans-serif; letter-spacing:.16em; text-transform:uppercase; }
+  .territory-copy h4 { margin: 10px 0 10px; font: 700 31px/.93 Georgia, serif; letter-spacing:-.04em; }
+  .territory-copy p { margin: 0; width: 80%; color: rgba(255,255,255,.72); font: 400 10px/1.5 Arial, sans-serif; }
+  .territory .preview-chip { margin-top: 17px; background:#a7d64c; color:#162018; }
+  .territory-index { position:absolute; z-index:3; left:20px; right:20px; bottom:18px; display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid rgba(255,255,255,.28); }
+  .territory-index div { padding:11px 7px 0 0; color:rgba(255,255,255,.6); font:500 7px/1.25 Arial,sans-serif; text-transform:uppercase; letter-spacing:.08em; }
+  .territory-index strong { display:block; margin-bottom:4px; color:#fff; font-size:12px; }
+
+  .laboratory { background:#ebe7dc; color:#17201b; }
+  .laboratory .preview-nav { background:#f5f2e9; border-bottom:1px solid #d7d0c3; }
+  .laboratory .preview-logo { width:92px; }
+  .laboratory .preview-nav-links { color:#536057; }
+  .lab-grid { position:absolute; inset:58px 0 0; display:grid; grid-template-columns:1.05fr .95fr; }
+  .lab-copy { padding:38px 15px 20px 20px; background:#f5f2e9; }
+  .lab-copy .num { color:#26794b; font:700 9px/1 monospace; }
+  .lab-copy h4 { margin:11px 0 10px; font:650 27px/.98 Arial,sans-serif; letter-spacing:-.055em; }
+  .lab-copy p { margin:0; color:#667068; font:400 9px/1.5 Arial,sans-serif; }
+  .lab-copy .preview-chip { margin-top:18px; background:#1c3025; color:#fff; border-radius:3px; }
+  .lab-photo { position:relative; background:url('/files/mix-design.jpg') center/cover; }
+  .lab-photo:after { content:'ASTM / NTP / MTC'; position:absolute; right:10px; bottom:10px; padding:6px 7px; color:#fff; background:rgba(17,24,20,.78); font:600 7px/1 monospace; }
+  .lab-metrics { position:absolute; left:0; right:0; bottom:0; display:grid; grid-template-columns:repeat(3,1fr); background:#173225; color:#fff; }
+  .lab-metrics div { padding:12px 10px; border-right:1px solid rgba(255,255,255,.13); font:500 7px/1.25 Arial,sans-serif; color:rgba(255,255,255,.62); }
+  .lab-metrics strong { display:block; margin-bottom:3px; color:#d9ecaa; font:700 14px/1 monospace; }
+
+  .living { background:#f8faf7; color:#162019; }
+  .living .preview-nav { background:rgba(248,250,247,.94); border-bottom:1px solid rgba(27,47,36,.12); }
+  .living .preview-logo { width:94px; }
+  .living .preview-nav-links { color:#4f5b53; }
+  .living-photo { position:absolute; left:14px; right:14px; top:67px; height:196px; border-radius:16px; background:linear-gradient(180deg,transparent 35%,rgba(13,26,18,.72)),url('/files/team-geophysics.jpg') center/cover; overflow:hidden; }
+  .living-photo span { position:absolute; left:14px; bottom:13px; color:#fff; font:600 8px/1.3 Arial,sans-serif; letter-spacing:.08em; text-transform:uppercase; }
+  .living-copy { position:absolute; left:20px; right:20px; top:286px; }
+  .living-copy h4 { margin:0; font:700 25px/1.02 Georgia,serif; letter-spacing:-.03em; }
+  .living-copy p { margin:9px 0 0; width:87%; color:#657169; font:400 9px/1.45 Arial,sans-serif; }
+  .living-links { margin-top:17px; display:flex; gap:7px; }
+  .living-links span { padding:7px 8px; border:1px solid #bcc8bf; border-radius:999px; color:#27523a; font:700 7px/1 Arial,sans-serif; text-transform:uppercase; }
+  .living-mark { position:absolute; right:14px; bottom:12px; width:46px; height:46px; border-radius:50%; background:#9fbe55; display:grid; place-items:center; color:#16321e; font:700 8px/1 Arial,sans-serif; text-align:center; transform:rotate(-8deg); }
+
+  @media (max-width: 950px) { .direction-grid { grid-template-columns: 1fr; } .preview { height: 460px; } }
+</style>
+
+<div class="directions-intro">
+  <div class="label">PRO INGEMA · rediseño del sitio</div>
+  <h2>¿Qué dirección representa mejor a la empresa?</h2>
+  <p class="subtitle">Las tres propuestas usan el logotipo, el territorio cusqueño y fotografías reales del trabajo en campo. Haz clic en la opción que quieras desarrollar.</p>
+</div>
+
+<div class="direction-grid">
+  <div class="direction-card" data-choice="territorio-tecnico" onclick="toggleSelect(this)">
+    <div class="preview territory">
+      <div class="territory-hero"></div>
+      <div class="preview-nav">
+        <img class="preview-logo" src="/files/logo-proingema.png" alt="PRO INGEMA">
+        <div class="preview-nav-links"><span>Servicios</span><span>Proyectos</span><span>Contacto</span></div>
+      </div>
+      <div class="territory-copy">
+        <div class="eyebrow">Ingeniería desde el territorio</div>
+        <h4>Conocemos el suelo.<br>Reducimos el riesgo.</h4>
+        <p>Estudios geotécnicos, geofísica y laboratorio para tomar decisiones de obra con evidencia.</p>
+        <span class="preview-chip">Solicitar evaluación →</span>
+      </div>
+      <div class="territory-index"><div><strong>01</strong>Geotecnia</div><div><strong>02</strong>Laboratorio</div><div><strong>03</strong>Medio ambiente</div></div>
+    </div>
+    <div class="direction-body">
+      <div class="direction-kicker">Opción A <span class="recommend">Recomendada</span></div>
+      <h3>Territorio técnico</h3>
+      <p>Seria, diferenciada y con carácter andino. Presenta a PRO INGEMA como especialista de campo con respaldo técnico.</p>
+      <div class="direction-tags"><span>Mayor autoridad</span><span>Imágenes panorámicas</span><span>Conversión comercial</span></div>
+    </div>
+  </div>
+
+  <div class="direction-card" data-choice="laboratorio-editorial" onclick="toggleSelect(this)">
+    <div class="preview laboratory">
+      <div class="preview-nav">
+        <img class="preview-logo" src="/files/logo-proingema.png" alt="PRO INGEMA">
+        <div class="preview-nav-links"><span>Ensayos</span><span>Métodos</span><span>Cotizar</span></div>
+      </div>
+      <div class="lab-grid">
+        <div class="lab-copy">
+          <div class="num">LAB / 2011—2026</div>
+          <h4>Resultados que sostienen decisiones.</h4>
+          <p>Ensayos de suelos, concreto y agregados bajo procedimientos técnicos y equipos calibrados.</p>
+          <span class="preview-chip">Ver catálogo de ensayos</span>
+        </div>
+        <div class="lab-photo"></div>
+      </div>
+      <div class="lab-metrics"><div><strong>70+</strong>ensayos disponibles</div><div><strong>15</strong>años de experiencia</div><div><strong>6</strong>áreas técnicas</div></div>
+    </div>
+    <div class="direction-body">
+      <div class="direction-kicker">Opción B</div>
+      <h3>Laboratorio editorial</h3>
+      <p>Más racional y ordenada. Convierte la amplitud del catálogo de ensayos en el centro de la propuesta.</p>
+      <div class="direction-tags"><span>Precisión</span><span>Catálogo técnico</span><span>Lectura rápida</span></div>
+    </div>
+  </div>
+
+  <div class="direction-card" data-choice="ingenieria-viva" onclick="toggleSelect(this)">
+    <div class="preview living">
+      <div class="preview-nav">
+        <img class="preview-logo" src="/files/logo-proingema.png" alt="PRO INGEMA">
+        <div class="preview-nav-links"><span>Nosotros</span><span>Campo</span><span>Hablar</span></div>
+      </div>
+      <div class="living-photo"><span>Equipo geofísico · Cusco, Perú</span></div>
+      <div class="living-copy">
+        <h4>Ingeniería cercana.<br>Trabajo comprobable.</h4>
+        <p>Personas, equipos y proyectos reales explicados con claridad para instituciones y empresas.</p>
+        <div class="living-links"><span>Geotecnia</span><span>Laboratorio</span><span>Ambiental</span></div>
+      </div>
+      <div class="living-mark">DESDE<br>2011</div>
+    </div>
+    <div class="direction-body">
+      <div class="direction-kicker">Opción C</div>
+      <h3>Ingeniería viva</h3>
+      <p>Más humana y luminosa. Prioriza al equipo, la confianza y la explicación sencilla de servicios complejos.</p>
+      <div class="direction-tags"><span>Confianza humana</span><span>Accesible</span><span>Fotografía real</span></div>
+    </div>
+  </div>
+</div>

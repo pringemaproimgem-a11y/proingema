@@ -1,0 +1,634 @@
+[TypeError: fetch failed] {
+  [cause]: AggregateError: 
+      at ignore-listed frames {
+    code: 'EACCES',
+    [errors]: [ [Error], [Error], [Error], [Error] ]
+  }
+}
+⨯ ./components/home/ServicesPreview.tsx:7:1
+Module not found: Can't resolve '@/lib/data/services'
+  [90m 5 |[0m [36mimport[0m { [33mRevealGroup[0m, [33mRevealItem[0m } [36mfrom[0m [32m"@/components/ui/Reveal"[0m;
+  [90m 6 |[0m [36mimport[0m { [33mBrandImage[0m } [36mfrom[0m [32m"@/components/ui/BrandImage"[0m;
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m { [33mSERVICES[0m } [36mfrom[0m [32m"@/lib/data/services"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { resolveImage } [36mfrom[0m [32m"@/lib/resolve-image"[0m;
+  [90m 9 |[0m
+  [90m10 |[0m [36mexport[0m [36mfunction[0m [33mServicesPreview[0m() {
+
+Import map: aliased to relative './lib/data/services' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/home/ServicesPreview.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./components/home/ServicesPreview.tsx:7:1
+Module not found: Can't resolve '@/lib/data/services'
+  [90m 5 |[0m [36mimport[0m { [33mRevealGroup[0m, [33mRevealItem[0m } [36mfrom[0m [32m"@/components/ui/Reveal"[0m;
+  [90m 6 |[0m [36mimport[0m { [33mBrandImage[0m } [36mfrom[0m [32m"@/components/ui/BrandImage"[0m;
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m { [33mSERVICES[0m } [36mfrom[0m [32m"@/lib/data/services"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { resolveImage } [36mfrom[0m [32m"@/lib/resolve-image"[0m;
+  [90m 9 |[0m
+  [90m10 |[0m [36mexport[0m [36mfunction[0m [33mServicesPreview[0m() {
+
+Import map: aliased to relative './lib/data/services' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/home/ServicesPreview.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./components/home/ServicesPreview.tsx:7:1
+Module not found: Can't resolve '@/lib/data/services'
+  [90m 5 |[0m [36mimport[0m { [33mRevealGroup[0m, [33mRevealItem[0m } [36mfrom[0m [32m"@/components/ui/Reveal"[0m;
+  [90m 6 |[0m [36mimport[0m { [33mBrandImage[0m } [36mfrom[0m [32m"@/components/ui/BrandImage"[0m;
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m { [33mSERVICES[0m } [36mfrom[0m [32m"@/lib/data/services"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { resolveImage } [36mfrom[0m [32m"@/lib/resolve-image"[0m;
+  [90m 9 |[0m
+  [90m10 |[0m [36mexport[0m [36mfunction[0m [33mServicesPreview[0m() {
+
+Import map: aliased to relative './lib/data/services' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/home/ServicesPreview.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./components/home/ServicesPreview.tsx:7:1
+Module not found: Can't resolve '@/lib/data/services'
+  [90m 5 |[0m [36mimport[0m { [33mRevealGroup[0m, [33mRevealItem[0m } [36mfrom[0m [32m"@/components/ui/Reveal"[0m;
+  [90m 6 |[0m [36mimport[0m { [33mBrandImage[0m } [36mfrom[0m [32m"@/components/ui/BrandImage"[0m;
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m { [33mSERVICES[0m } [36mfrom[0m [32m"@/lib/data/services"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { resolveImage } [36mfrom[0m [32m"@/lib/resolve-image"[0m;
+  [90m 9 |[0m
+  [90m10 |[0m [36mexport[0m [36mfunction[0m [33mServicesPreview[0m() {
+
+Import map: aliased to relative './lib/data/services' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/home/ServicesPreview.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./components/home/ServicesPreview.tsx:7:1
+Module not found: Can't resolve '@/lib/data/services'
+  [90m 5 |[0m [36mimport[0m { [33mRevealGroup[0m, [33mRevealItem[0m } [36mfrom[0m [32m"@/components/ui/Reveal"[0m;
+  [90m 6 |[0m [36mimport[0m { [33mBrandImage[0m } [36mfrom[0m [32m"@/components/ui/BrandImage"[0m;
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m { [33mSERVICES[0m } [36mfrom[0m [32m"@/lib/data/services"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { resolveImage } [36mfrom[0m [32m"@/lib/resolve-image"[0m;
+  [90m 9 |[0m
+  [90m10 |[0m [36mexport[0m [36mfunction[0m [33mServicesPreview[0m() {
+
+Import map: aliased to relative './lib/data/services' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/home/ServicesPreview.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./components/home/ServicesPreview.tsx:7:1
+Module not found: Can't resolve '@/lib/data/services'
+  [90m 5 |[0m [36mimport[0m { [33mRevealGroup[0m, [33mRevealItem[0m } [36mfrom[0m [32m"@/components/ui/Reveal"[0m;
+  [90m 6 |[0m [36mimport[0m { [33mBrandImage[0m } [36mfrom[0m [32m"@/components/ui/BrandImage"[0m;
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m { [33mSERVICES[0m } [36mfrom[0m [32m"@/lib/data/services"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { resolveImage } [36mfrom[0m [32m"@/lib/resolve-image"[0m;
+  [90m 9 |[0m
+  [90m10 |[0m [36mexport[0m [36mfunction[0m [33mServicesPreview[0m() {
+
+Import map: aliased to relative './lib/data/services' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/home/ServicesPreview.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./components/home/ServicesPreview.tsx:7:1
+Module not found: Can't resolve '@/lib/data/services'
+  [90m 5 |[0m [36mimport[0m { [33mRevealGroup[0m, [33mRevealItem[0m } [36mfrom[0m [32m"@/components/ui/Reveal"[0m;
+  [90m 6 |[0m [36mimport[0m { [33mBrandImage[0m } [36mfrom[0m [32m"@/components/ui/BrandImage"[0m;
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m { [33mSERVICES[0m } [36mfrom[0m [32m"@/lib/data/services"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { resolveImage } [36mfrom[0m [32m"@/lib/resolve-image"[0m;
+  [90m 9 |[0m
+  [90m10 |[0m [36mexport[0m [36mfunction[0m [33mServicesPreview[0m() {
+
+Import map: aliased to relative './lib/data/services' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/home/ServicesPreview.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./components/home/ServicesPreview.tsx:7:1
+Module not found: Can't resolve '@/lib/data/services'
+  [90m 5 |[0m [36mimport[0m { [33mRevealGroup[0m, [33mRevealItem[0m } [36mfrom[0m [32m"@/components/ui/Reveal"[0m;
+  [90m 6 |[0m [36mimport[0m { [33mBrandImage[0m } [36mfrom[0m [32m"@/components/ui/BrandImage"[0m;
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m { [33mSERVICES[0m } [36mfrom[0m [32m"@/lib/data/services"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { resolveImage } [36mfrom[0m [32m"@/lib/resolve-image"[0m;
+  [90m 9 |[0m
+  [90m10 |[0m [36mexport[0m [36mfunction[0m [33mServicesPreview[0m() {
+
+Import map: aliased to relative './lib/data/services' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/home/ServicesPreview.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./components/home/ServicesPreview.tsx:7:1
+Module not found: Can't resolve '@/lib/data/services'
+  [90m 5 |[0m [36mimport[0m { [33mRevealGroup[0m, [33mRevealItem[0m } [36mfrom[0m [32m"@/components/ui/Reveal"[0m;
+  [90m 6 |[0m [36mimport[0m { [33mBrandImage[0m } [36mfrom[0m [32m"@/components/ui/BrandImage"[0m;
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m { [33mSERVICES[0m } [36mfrom[0m [32m"@/lib/data/services"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { resolveImage } [36mfrom[0m [32m"@/lib/resolve-image"[0m;
+  [90m 9 |[0m
+  [90m10 |[0m [36mexport[0m [36mfunction[0m [33mServicesPreview[0m() {
+
+Import map: aliased to relative './lib/data/services' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/home/ServicesPreview.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./components/home/ServicesPreview.tsx:7:1
+Module not found: Can't resolve '@/lib/data/services'
+  [90m 5 |[0m [36mimport[0m { [33mRevealGroup[0m, [33mRevealItem[0m } [36mfrom[0m [32m"@/components/ui/Reveal"[0m;
+  [90m 6 |[0m [36mimport[0m { [33mBrandImage[0m } [36mfrom[0m [32m"@/components/ui/BrandImage"[0m;
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m { [33mSERVICES[0m } [36mfrom[0m [32m"@/lib/data/services"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { resolveImage } [36mfrom[0m [32m"@/lib/resolve-image"[0m;
+  [90m 9 |[0m
+  [90m10 |[0m [36mexport[0m [36mfunction[0m [33mServicesPreview[0m() {
+
+Import map: aliased to relative './lib/data/services' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/home/ServicesPreview.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./components/home/ServicesPreview.tsx:7:1
+Module not found: Can't resolve '@/lib/data/services'
+  [90m 5 |[0m [36mimport[0m { [33mRevealGroup[0m, [33mRevealItem[0m } [36mfrom[0m [32m"@/components/ui/Reveal"[0m;
+  [90m 6 |[0m [36mimport[0m { [33mBrandImage[0m } [36mfrom[0m [32m"@/components/ui/BrandImage"[0m;
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m { [33mSERVICES[0m } [36mfrom[0m [32m"@/lib/data/services"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { resolveImage } [36mfrom[0m [32m"@/lib/resolve-image"[0m;
+  [90m 9 |[0m
+  [90m10 |[0m [36mexport[0m [36mfunction[0m [33mServicesPreview[0m() {
+
+Import map: aliased to relative './lib/data/services' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/home/ServicesPreview.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./components/home/ServicesPreview.tsx:7:1
+Module not found: Can't resolve '@/lib/data/services'
+  [90m 5 |[0m [36mimport[0m { [33mRevealGroup[0m, [33mRevealItem[0m } [36mfrom[0m [32m"@/components/ui/Reveal"[0m;
+  [90m 6 |[0m [36mimport[0m { [33mBrandImage[0m } [36mfrom[0m [32m"@/components/ui/BrandImage"[0m;
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m { [33mSERVICES[0m } [36mfrom[0m [32m"@/lib/data/services"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { resolveImage } [36mfrom[0m [32m"@/lib/resolve-image"[0m;
+  [90m 9 |[0m
+  [90m10 |[0m [36mexport[0m [36mfunction[0m [33mServicesPreview[0m() {
+
+Import map: aliased to relative './lib/data/services' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/home/ServicesPreview.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./components/home/ServicesPreview.tsx:7:1
+Module not found: Can't resolve '@/lib/data/services'
+  [90m 5 |[0m [36mimport[0m { [33mRevealGroup[0m, [33mRevealItem[0m } [36mfrom[0m [32m"@/components/ui/Reveal"[0m;
+  [90m 6 |[0m [36mimport[0m { [33mBrandImage[0m } [36mfrom[0m [32m"@/components/ui/BrandImage"[0m;
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m { [33mSERVICES[0m } [36mfrom[0m [32m"@/lib/data/services"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { resolveImage } [36mfrom[0m [32m"@/lib/resolve-image"[0m;
+  [90m 9 |[0m
+  [90m10 |[0m [36mexport[0m [36mfunction[0m [33mServicesPreview[0m() {
+
+Import map: aliased to relative './lib/data/services' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/home/ServicesPreview.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./components/home/ServicesPreview.tsx:7:1
+Module not found: Can't resolve '@/lib/data/services'
+  [90m 5 |[0m [36mimport[0m { [33mRevealGroup[0m, [33mRevealItem[0m } [36mfrom[0m [32m"@/components/ui/Reveal"[0m;
+  [90m 6 |[0m [36mimport[0m { [33mBrandImage[0m } [36mfrom[0m [32m"@/components/ui/BrandImage"[0m;
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m { [33mSERVICES[0m } [36mfrom[0m [32m"@/lib/data/services"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { resolveImage } [36mfrom[0m [32m"@/lib/resolve-image"[0m;
+  [90m 9 |[0m
+  [90m10 |[0m [36mexport[0m [36mfunction[0m [33mServicesPreview[0m() {
+
+Import map: aliased to relative './lib/data/services' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/home/ServicesPreview.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./components/home/ServicesPreview.tsx:7:1
+Module not found: Can't resolve '@/lib/data/services'
+  [90m 5 |[0m [36mimport[0m { [33mRevealGroup[0m, [33mRevealItem[0m } [36mfrom[0m [32m"@/components/ui/Reveal"[0m;
+  [90m 6 |[0m [36mimport[0m { [33mBrandImage[0m } [36mfrom[0m [32m"@/components/ui/BrandImage"[0m;
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m { [33mSERVICES[0m } [36mfrom[0m [32m"@/lib/data/services"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { resolveImage } [36mfrom[0m [32m"@/lib/resolve-image"[0m;
+  [90m 9 |[0m
+  [90m10 |[0m [36mexport[0m [36mfunction[0m [33mServicesPreview[0m() {
+
+Import map: aliased to relative './lib/data/services' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/home/ServicesPreview.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./components/home/ServicesPreview.tsx:7:1
+Module not found: Can't resolve '@/lib/data/services'
+  [90m 5 |[0m [36mimport[0m { [33mRevealGroup[0m, [33mRevealItem[0m } [36mfrom[0m [32m"@/components/ui/Reveal"[0m;
+  [90m 6 |[0m [36mimport[0m { [33mBrandImage[0m } [36mfrom[0m [32m"@/components/ui/BrandImage"[0m;
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m { [33mSERVICES[0m } [36mfrom[0m [32m"@/lib/data/services"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { resolveImage } [36mfrom[0m [32m"@/lib/resolve-image"[0m;
+  [90m 9 |[0m
+  [90m10 |[0m [36mexport[0m [36mfunction[0m [33mServicesPreview[0m() {
+
+Import map: aliased to relative './lib/data/services' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/home/ServicesPreview.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./components/home/ServicesPreview.tsx:7:1
+Module not found: Can't resolve '@/lib/data/services'
+  [90m 5 |[0m [36mimport[0m { [33mRevealGroup[0m, [33mRevealItem[0m } [36mfrom[0m [32m"@/components/ui/Reveal"[0m;
+  [90m 6 |[0m [36mimport[0m { [33mBrandImage[0m } [36mfrom[0m [32m"@/components/ui/BrandImage"[0m;
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m { [33mSERVICES[0m } [36mfrom[0m [32m"@/lib/data/services"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { resolveImage } [36mfrom[0m [32m"@/lib/resolve-image"[0m;
+  [90m 9 |[0m
+  [90m10 |[0m [36mexport[0m [36mfunction[0m [33mServicesPreview[0m() {
+
+Import map: aliased to relative './lib/data/services' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/home/ServicesPreview.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./components/home/ServicesPreview.tsx:7:1
+Module not found: Can't resolve '@/lib/data/services'
+  [90m 5 |[0m [36mimport[0m { [33mRevealGroup[0m, [33mRevealItem[0m } [36mfrom[0m [32m"@/components/ui/Reveal"[0m;
+  [90m 6 |[0m [36mimport[0m { [33mBrandImage[0m } [36mfrom[0m [32m"@/components/ui/BrandImage"[0m;
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m { [33mSERVICES[0m } [36mfrom[0m [32m"@/lib/data/services"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { resolveImage } [36mfrom[0m [32m"@/lib/resolve-image"[0m;
+  [90m 9 |[0m
+  [90m10 |[0m [36mexport[0m [36mfunction[0m [33mServicesPreview[0m() {
+
+Import map: aliased to relative './lib/data/services' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/home/ServicesPreview.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./components/home/ServicesPreview.tsx:7:1
+Module not found: Can't resolve '@/lib/data/services'
+  [90m 5 |[0m [36mimport[0m { [33mRevealGroup[0m, [33mRevealItem[0m } [36mfrom[0m [32m"@/components/ui/Reveal"[0m;
+  [90m 6 |[0m [36mimport[0m { [33mBrandImage[0m } [36mfrom[0m [32m"@/components/ui/BrandImage"[0m;
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m { [33mSERVICES[0m } [36mfrom[0m [32m"@/lib/data/services"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { resolveImage } [36mfrom[0m [32m"@/lib/resolve-image"[0m;
+  [90m 9 |[0m
+  [90m10 |[0m [36mexport[0m [36mfunction[0m [33mServicesPreview[0m() {
+
+Import map: aliased to relative './lib/data/services' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/home/ServicesPreview.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./components/home/ServicesPreview.tsx:7:1
+Module not found: Can't resolve '@/lib/data/services'
+  [90m 5 |[0m [36mimport[0m { [33mRevealGroup[0m, [33mRevealItem[0m } [36mfrom[0m [32m"@/components/ui/Reveal"[0m;
+  [90m 6 |[0m [36mimport[0m { [33mBrandImage[0m } [36mfrom[0m [32m"@/components/ui/BrandImage"[0m;
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m { [33mSERVICES[0m } [36mfrom[0m [32m"@/lib/data/services"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { resolveImage } [36mfrom[0m [32m"@/lib/resolve-image"[0m;
+  [90m 9 |[0m
+  [90m10 |[0m [36mexport[0m [36mfunction[0m [33mServicesPreview[0m() {
+
+Import map: aliased to relative './lib/data/services' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/home/ServicesPreview.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./components/home/ServicesPreview.tsx:7:1
+Module not found: Can't resolve '@/lib/data/services'
+  [90m 5 |[0m [36mimport[0m { [33mRevealGroup[0m, [33mRevealItem[0m } [36mfrom[0m [32m"@/components/ui/Reveal"[0m;
+  [90m 6 |[0m [36mimport[0m { [33mBrandImage[0m } [36mfrom[0m [32m"@/components/ui/BrandImage"[0m;
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m { [33mSERVICES[0m } [36mfrom[0m [32m"@/lib/data/services"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { resolveImage } [36mfrom[0m [32m"@/lib/resolve-image"[0m;
+  [90m 9 |[0m
+  [90m10 |[0m [36mexport[0m [36mfunction[0m [33mServicesPreview[0m() {
+
+Import map: aliased to relative './lib/data/services' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/home/ServicesPreview.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./components/home/ServicesPreview.tsx:7:1
+Module not found: Can't resolve '@/lib/data/services'
+  [90m 5 |[0m [36mimport[0m { [33mRevealGroup[0m, [33mRevealItem[0m } [36mfrom[0m [32m"@/components/ui/Reveal"[0m;
+  [90m 6 |[0m [36mimport[0m { [33mBrandImage[0m } [36mfrom[0m [32m"@/components/ui/BrandImage"[0m;
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m { [33mSERVICES[0m } [36mfrom[0m [32m"@/lib/data/services"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { resolveImage } [36mfrom[0m [32m"@/lib/resolve-image"[0m;
+  [90m 9 |[0m
+  [90m10 |[0m [36mexport[0m [36mfunction[0m [33mServicesPreview[0m() {
+
+Import map: aliased to relative './lib/data/services' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/home/ServicesPreview.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./components/home/ServicesPreview.tsx:7:1
+Module not found: Can't resolve '@/lib/data/services'
+  [90m 5 |[0m [36mimport[0m { [33mRevealGroup[0m, [33mRevealItem[0m } [36mfrom[0m [32m"@/components/ui/Reveal"[0m;
+  [90m 6 |[0m [36mimport[0m { [33mBrandImage[0m } [36mfrom[0m [32m"@/components/ui/BrandImage"[0m;
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m { [33mSERVICES[0m } [36mfrom[0m [32m"@/lib/data/services"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { resolveImage } [36mfrom[0m [32m"@/lib/resolve-image"[0m;
+  [90m 9 |[0m
+  [90m10 |[0m [36mexport[0m [36mfunction[0m [33mServicesPreview[0m() {
+
+Import map: aliased to relative './lib/data/services' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/home/ServicesPreview.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[browser] ./components/home/ServicesPreview.tsx:7:1
+Module not found: Can't resolve '@/lib/data/services'
+   5 | import { RevealGroup, RevealItem } from "@/components/ui/Reveal";
+   6 | import { BrandImage } from "@/components/ui/BrandImage";
+>  7 | import { SERVICES } from "@/lib/data/services";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import { resolveImage } from "@/lib/resolve-image";
+   9 |
+  10 | export function ServicesPreview() {
+
+Import map: aliased to relative './lib/data/services' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/home/ServicesPreview.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./components/home/ServicesPreview.tsx:7:1
+Module not found: Can't resolve '@/lib/data/services'
+   5 | import { RevealGroup, RevealItem } from "@/components/ui/Reveal";
+   6 | import { BrandImage } from "@/components/ui/BrandImage";
+>  7 | import { SERVICES } from "@/lib/data/services";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import { resolveImage } from "@/lib/resolve-image";
+   9 |
+  10 | export function ServicesPreview() {
+
+Import map: aliased to relative './lib/data/services' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/home/ServicesPreview.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./components/home/ServicesPreview.tsx:7:1
+Module not found: Can't resolve '@/lib/data/services'
+   5 | import { RevealGroup, RevealItem } from "@/components/ui/Reveal";
+   6 | import { BrandImage } from "@/components/ui/BrandImage";
+>  7 | import { SERVICES } from "@/lib/data/services";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import { resolveImage } from "@/lib/resolve-image";
+   9 |
+  10 | export function ServicesPreview() {
+
+Import map: aliased to relative './lib/data/services' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/home/ServicesPreview.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./components/home/ServicesPreview.tsx:7:1
+Module not found: Can't resolve '@/lib/data/services'
+   5 | import { RevealGroup, RevealItem } from "@/components/ui/Reveal";
+   6 | import { BrandImage } from "@/components/ui/BrandImage";
+>  7 | import { SERVICES } from "@/lib/data/services";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import { resolveImage } from "@/lib/resolve-image";
+   9 |
+  10 | export function ServicesPreview() {
+
+Import map: aliased to relative './lib/data/services' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/home/ServicesPreview.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./components/home/ServicesPreview.tsx:7:1
+Module not found: Can't resolve '@/lib/data/services'
+   5 | import { RevealGroup, RevealItem } from "@/components/ui/Reveal";
+   6 | import { BrandImage } from "@/components/ui/BrandImage";
+>  7 | import { SERVICES } from "@/lib/data/services";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import { resolveImage } from "@/lib/resolve-image";
+   9 |
+  10 | export function ServicesPreview() {
+
+Import map: aliased to relative './lib/data/services' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/home/ServicesPreview.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./components/home/ServicesPreview.tsx:7:1
+Module not found: Can't resolve '@/lib/data/services'
+   5 | import { RevealGroup, RevealItem } from "@/components/ui/Reveal";
+   6 | import { BrandImage } from "@/components/ui/BrandImage";
+>  7 | import { SERVICES } from "@/lib/data/services";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import { resolveImage } from "@/lib/resolve-image";
+   9 |
+  10 | export function ServicesPreview() {
+
+Import map: aliased to relative './lib/data/services' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/home/ServicesPreview.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./components/home/ServicesPreview.tsx:7:1
+Module not found: Can't resolve '@/lib/data/services'
+   5 | import { RevealGroup, RevealItem } from "@/components/ui/Reveal";
+   6 | import { BrandImage } from "@/components/ui/BrandImage";
+>  7 | import { SERVICES } from "@/lib/data/services";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import { resolveImage } from "@/lib/resolve-image";
+   9 |
+  10 | export function ServicesPreview() {
+
+Import map: aliased to relative './lib/data/services' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/home/ServicesPreview.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./components/home/ServicesPreview.tsx:7:1
+Module not found: Can't resolve '@/lib/data/services'
+   5 | import { RevealGroup, RevealItem } from "@/components/ui/Reveal";
+   6 | import { BrandImage } from "@/components/ui/BrandImage";
+>  7 | import { SERVICES } from "@/lib/data/services";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import { resolveImage } from "@/lib/resolve-image";
+   9 |
+  10 | export function ServicesPreview() {
+
+Import map: aliased to relative './lib/data/services' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/home/ServicesPreview.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found 
