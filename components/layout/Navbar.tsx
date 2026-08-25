@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu, X, Phone, ArrowUpRight } from "lucide-react";
+import { Menu, X, Phone, ArrowUpRight, FileText } from "lucide-react";
 import { NAV_LINKS, COMPANY } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { BrandLogo } from "@/components/ui/BrandLogo";
@@ -82,7 +82,16 @@ export function Navbar() {
           })}
         </div>
 
-        <div className="hidden lg:block">
+        <div className="hidden items-center gap-3 lg:flex">
+          <a
+            href="/brochure/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 rounded-full border border-white/25 px-4 py-2.5 text-sm font-semibold text-white/90 transition-all hover:-translate-y-0.5 hover:border-white/50 hover:text-white"
+          >
+            <FileText className="h-4 w-4" />
+            Brochure
+          </a>
           <Link
             href="/contacto"
             className="inline-flex items-center gap-1.5 rounded-full bg-brand-green px-5 py-2.5 text-sm font-semibold text-white shadow-[0_8px_24px_-8px_rgba(0,181,26,0.55)] transition-all hover:-translate-y-0.5 hover:bg-brand-green-dark"
@@ -126,9 +135,18 @@ export function Navbar() {
                   {link.label}
                 </Link>
               ))}
+              <a
+                href="/brochure/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 flex items-center justify-center gap-1.5 rounded-lg border border-white/20 px-4 py-3 text-center text-sm font-semibold text-white/85"
+              >
+                <FileText className="h-4 w-4" />
+                Ver Brochure
+              </a>
               <Link
                 href="/contacto"
-                className="mt-2 rounded-lg bg-brand-green px-4 py-3 text-center text-sm font-semibold text-white"
+                className="rounded-lg bg-brand-green px-4 py-3 text-center text-sm font-semibold text-white"
               >
                 Solicitar Cotización
               </Link>

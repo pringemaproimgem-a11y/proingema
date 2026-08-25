@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<template id="__bundler_thumbnail" data-bg-color="#12100D">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#12100D"/>
+    <path d="M240 560 L440 380 L600 470 L800 300 L960 400" fill="none" stroke="#4FA83A" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="240" y="600" width="720" height="26" rx="13" fill="#EDE7DB"/>
+    <rect x="240" y="656" width="420" height="26" rx="13" fill="#4FA83A"/>
+  </svg>
+</template>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Source+Sans+3:wght@300;400;600&amp;display=swap" rel="stylesheet">
+<style>
+  html{scroll-behavior:smooth}
+  body{margin:0;background:#12100D;color:#EDE7DB;font-family:'Source Sans 3',sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:#7FCF52;text-decoration:none}
+  a:hover{color:#EDE7DB}
+  ::selection{background:#4FA83A;color:#0B0A08}
+  @keyframes drift{0%{transform:translateY(0)}100%{transform:translateY(-14px)}}
+  @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+  @media (prefers-reduced-motion: reduce){[data-marquee]{animation:none !important}}
+</style>
+</helmet>
+
+<div style="position: absolute; background: #12100D; overflow-x: hidden; left: 32px; top: 8px">
+
+  
+
+  <aside style="position:fixed;top:0;left:0;height:100vh;width:104px;z-index:50;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none;font-family:'IBM Plex Mono',monospace">
+    <div style="position:absolute;top:0;left:52px;width:1px;height:100%;background:rgba(237,231,219,0.14)"></div>
+    <div ref="{{ railFill }}" style="position:absolute;top:0;left:51px;width:3px;height:0%;background:linear-gradient(180deg,#7FCF52,#4FA83A 40%,#8A5230)"></div>
+    <div ref="{{ railDot }}" style="position:absolute;top:0;left:44px;width:17px;height:17px;border-radius:50%;border:1px solid #7FCF52;background:#12100D;display:flex;align-items:center;justify-content:center">
+      <div style="width:5px;height:5px;border-radius:50%;background:#7FCF52"></div>
+    </div>
+    <div style="position:absolute;bottom:34px;left:0;width:104px;text-align:center">
+      <div ref="{{ depthOut }}" style="font-size:20px;font-weight:500;color:#7FCF52;letter-spacing:-0.02em">0.00</div>
+      <div style="font-size:9px;letter-spacing:0.34em;color:rgba(237,231,219,0.4);margin-top:4px">METROS</div>
+    </div>
+    <div style="position:absolute;top:34px;left:0;width:104px;text-align:center;font-size:9px;letter-spacing:0.34em;color:rgba(237,231,219,0.4)">SONDAJE</div>
+  </aside>
+
+  <header style="position:fixed;top:0;left:104px;right:0;z-index:55;display:flex;align-items:center;justify-content:space-between;padding:14px 40px">
+    <a href="#" style="display:flex;align-items:center;background:#EDE7DB;border-radius:5px;padding:7px 12px">
+      <img src="img/logo.png" alt="PRO INGEMA S.A.C." style="height:44px;width:auto;object-fit:contain;display:block">
+    </a>
+    <nav style="display:flex;gap:26px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.16em;mix-blend-mode:difference">
+      <a href="#nosotros" style="color:#fff">NOSOTROS</a>
+      <a href="#servicios" style="color:#fff">SERVICIOS</a>
+      <a href="#laboratorio" style="color:#fff">LABORATORIO</a>
+      <a href="#contacto" style="color:#fff">CONTACTO</a>
+    </nav>
+  </header>
+
+  <main style="margin-left:104px">
+
+    <section data-depth="0.00" data-strata="SUPERFICIE" style="position:relative;min-height:100vh;display:flex;align-items:flex-end;overflow:hidden;padding:0 40px 64px">
+      <img data-parallax="0.18" src="img/atardecer-opt.jpg" alt="" style="position:absolute;inset:-10% 0;width:100%;height:120%;object-fit:cover;opacity:0.5">
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,16,13,0.55) 0%,rgba(18,16,13,0.2) 35%,rgba(18,16,13,0.97) 100%)"></div>
+      <div style="position:relative;width:100%;max-width:1180px">
+        <div data-reveal="" style="display:flex;align-items:center;gap:14px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.3em;color:#7FCF52">
+          <span style="width:40px;height:1px;background:#7FCF52"></span>CUSCO · PERÚ · DESDE 2011
+        </div>
+        <h1 data-reveal="" style="margin:22px 0 0;font-family:Archivo,sans-serif;font-weight:900;font-size:clamp(52px,9.2vw,148px);line-height:0.86;letter-spacing:-0.045em;text-wrap:balance">Leemos<br>el suelo<br><span style="color:#7FCF52">antes de</span> construir</h1>
+        <div style="display:flex;flex-wrap:wrap;align-items:flex-end;gap:48px;margin-top:44px">
+          <p data-reveal="" style="margin:0;max-width:430px;font-size:17px;line-height:1.6;color:rgba(237,231,219,0.72);font-weight:300">Estudios geotécnicos, geológicos y ambientales con laboratorio propio de mecánica de suelos y materiales de construcción.</p>
+          <div data-reveal="" style="display:flex;gap:14px;align-items:center">
+            <img src="img/inacal.png" alt="INACAL DA Perú" style="height:84px;background:#EDE7DB;padding:6px;border-radius:4px">
+            <img src="img/iso17025.png" alt="ISO 17025" style="height:84px;background:#EDE7DB;padding:6px;border-radius:4px">
+          </div>
+        </div>
+      </div>
+      <div style="position:absolute;right:40px;bottom:64px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.3em;color:rgba(237,231,219,0.45);writing-mode:vertical-rl;animation:drift 2.4s ease-in-out infinite alternate">DESCIENDE ↓</div>
+    </section>
+
+    <section id="nosotros" data-depth="2.40" data-strata="RELLENO SUPERFICIAL" style="position:relative;padding:150px 40px;border-top:1px solid rgba(237,231,219,0.1)">
+      <div style="max-width:1180px;display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:80px;align-items:start">
+        <div>
+          <div data-reveal="" style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.3em;color:#8A5230">01 — QUIÉNES SOMOS</div>
+          <h2 data-reveal="" style="margin:18px 0 0;font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(34px,4.6vw,64px);line-height:0.98;letter-spacing:-0.035em">Ingeniería cusqueña con alcance nacional</h2>
+          <p data-reveal="" style="margin:28px 0 0;font-size:17px;line-height:1.65;color:rgba(237,231,219,0.66);font-weight:300;max-width:60ch">Fundado en 2019 por un equipo de jóvenes ingenieros cusqueños, el laboratorio nace con el propósito de ofrecer servicios técnicos especializados en el control de calidad de materiales de construcción. Tras un proceso de consolidación, en 2026 alcanza un hito significativo al convertirse en el primer laboratorio acreditado de la región Cusco ante el INACAL, bajo los requisitos de la NTP ISO 17025:2017. El alcance de esta acreditación comprende los ensayos realizados en las matrices de suelo, concreto y medio ambiente, lo cual avala su competencia técnica y la confiabilidad de sus resultados.</p>
+
+          <div style="margin-top:52px;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px;background:rgba(237,231,219,0.12)">
+            <div data-reveal="" style="background:#12100D;padding:28px 26px 30px">
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.28em;color:#7FCF52">MISIÓN</div>
+              <p style="margin:12px 0 0;font-size:15px;line-height:1.55;color:rgba(237,231,219,0.75);font-weight:300">Brindar servicios técnicos confiables y oportunos para todo tipo de proyectos y clientes, asegurando que los altos estándares de calidad se mantengan invariables en cada ensayo realizado.</p>
+            </div>
+            <div data-reveal="" style="background:#12100D;padding:28px 26px 30px">
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.28em;color:#C97A44">VISIÓN</div>
+              <p style="margin:12px 0 0;font-size:15px;line-height:1.55;color:rgba(237,231,219,0.75);font-weight:300">Ser empresa estable, confiable y referente en el sur del país por compromiso, calidad profesional y experiencia.</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="position:relative">
+          <div data-reveal="" style="position:relative;overflow:hidden;aspect-ratio:4/3">
+            <img src="img/equipo-oficina-full-opt.jpg" alt="Equipo PRO INGEMA" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center">
+          </div>
+          <div data-reveal="" style="position:absolute;left:-38px;bottom:-30px;background:#4FA83A;color:#0B0A08;padding:22px 28px 24px">
+            <div style="font-family:Archivo,sans-serif;font-weight:900;font-size:52px;line-height:0.9;letter-spacing:-0.04em">14</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.24em;margin-top:6px">AÑOS DE OPERACIÓN</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="max-width:1180px;margin-top:110px;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1px;background:rgba(237,231,219,0.12)">
+        <div data-reveal="" style="background:#12100D;padding:24px 0 0"><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.24em;color:rgba(237,231,219,0.42)">RAZÓN SOCIAL</div><div style="margin-top:8px;font-family:Archivo,sans-serif;font-weight:700;font-size:18px">PROINGEMA S.A.C.</div></div>
+        <div data-reveal="" style="background:#12100D;padding:24px 0 0 26px"><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.24em;color:rgba(237,231,219,0.42)">RUC</div><div style="margin-top:8px;font-family:Archivo,sans-serif;font-weight:700;font-size:18px">20604572321</div></div>
+        <div data-reveal="" style="background:#12100D;padding:24px 0 0 26px"></div>
+        <div data-reveal="" style="background:#12100D;padding:24px 0 0 26px"></div>
+      </div>
+    </section>
+
+    <section id="servicios" data-depth="5.10" data-strata="ARCILLA LIMOSA" style="position:relative;padding:150px 40px;background:#EDE7DB;color:#1A1712">
+      <div style="max-width:1180px">
+        <div data-reveal="" style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.3em;color:#8A5230">02 — SERVICIOS</div>
+        <h2 data-reveal="" style="margin:18px 0 0;font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(34px,5.4vw,76px);line-height:0.95;letter-spacing:-0.04em;max-width:16ch">Cuatro líneas de especialidad</h2>
+
+        <div style="margin-top:70px;border-top:1px solid rgba(26,23,18,0.16)">
+          <div data-reveal="" style="display:grid;grid-template-columns:52px minmax(200px,1fr) minmax(240px,1.15fr) 46px;gap:28px;align-items:center;padding:34px 0;border-bottom:1px solid rgba(26,23,18,0.16)">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8A5230">/01</span>
+            <h3 style="margin:0;font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(24px,2.7vw,38px);line-height:1;letter-spacing:-0.03em">Ingeniería geotécnica</h3>
+            <p style="margin:0;font-size:15px;line-height:1.55;color:rgba(26,23,18,0.66)">Estudios de mecánica de suelos para cimentaciones, pavimentos, taludes, redes y riego. Diseño de mezclas, canteras, fuentes de agua y percolación.</p>
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4FA83A" stroke-width="1.2" stroke-linecap="round"><path d="M3 7h18M3 12h18M3 17h18"></path><path d="M8 3v18"></path></svg>
+          </div>
+          <div data-reveal="" style="display:grid;grid-template-columns:52px minmax(200px,1fr) minmax(240px,1.15fr) 46px;gap:28px;align-items:center;padding:34px 0;border-bottom:1px solid rgba(26,23,18,0.16)">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8A5230">/02</span>
+            <h3 style="margin:0;font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(24px,2.7vw,38px);line-height:1;letter-spacing:-0.03em">Laboratorio de suelos y concreto</h3>
+            <p style="margin:0;font-size:15px;line-height:1.55;color:rgba(26,23,18,0.66)">Ensayos de clasificación, especiales, agregados, químicos, concreto fresco y endurecido, morteros. Acreditación INACAL-DA.</p>
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4FA83A" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v6.5L4.5 18a2 2 0 0 0 1.8 3h11.4a2 2 0 0 0 1.8-3L15 9.5V3"></path><path d="M8 3h8M7.5 14h9"></path></svg>
+          </div>
+          <div data-reveal="" style="display:grid;grid-template-columns:52px minmax(200px,1fr) minmax(240px,1.15fr) 46px;gap:28px;align-items:center;padding:34px 0;border-bottom:1px solid rgba(26,23,18,0.16)">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8A5230">/03</span>
+            <h3 style="margin:0;font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(24px,2.7vw,38px);line-height:1;letter-spacing:-0.03em">Servicios geofísicos</h3>
+            <p style="margin:0;font-size:15px;line-height:1.55;color:rgba(26,23,18,0.66)">Refracción sísmica, MASW, MAM-REMI, tomografía eléctrica ERT, sondeo eléctrico vertical y microtremores HVSR.</p>
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4FA83A" stroke-width="1.2" stroke-linecap="round"><path d="M2 14c2.5-4 4.5-4 7 0s4.5 4 7 0 4.5-4 6 0"></path><path d="M2 8c2.5-4 4.5-4 7 0s4.5 4 7 0 4.5-4 6 0"></path></svg>
+          </div>
+          <div data-reveal="" style="display:grid;grid-template-columns:52px minmax(200px,1fr) minmax(240px,1.15fr) 46px;gap:28px;align-items:center;padding:34px 0;border-bottom:1px solid rgba(26,23,18,0.16)">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8A5230">/04</span>
+            <h3 style="margin:0;font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(24px,2.7vw,38px);line-height:1;letter-spacing:-0.03em">Medio ambiente y gestión social</h3>
+            <p style="margin:0;font-size:15px;line-height:1.55;color:rgba(26,23,18,0.66)">Monitoreos de agua, aire, ruido y suelos. Instrumentos de gestión ambiental, biodiversidad, residuos sólidos y relaciones comunitarias.</p>
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4FA83A" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-4-3-7-6.5-7-10.5A7 7 0 0 1 19 10.5C19 14.5 16 18 12 21Z"></path><path d="M12 21V8M12 12l3-3M12 15l-3-3"></path></svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section data-depth="8.70" data-strata="GRAVA ARENOSA" style="position:relative;padding:150px 40px">
+      <div style="max-width:1180px;display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:76px;align-items:center">
+        <div>
+          <div data-reveal="" style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.3em;color:#8A5230">03 — GEOTECNIA</div>
+          <h2 data-reveal="" style="margin:18px 0 0;font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(32px,4.4vw,60px);line-height:0.98;letter-spacing:-0.035em">Estudios de mecánica de suelos</h2>
+          <p data-reveal="" style="margin:24px 0 0;font-size:17px;line-height:1.65;color:rgba(237,231,219,0.66);font-weight:300;max-width:58ch">Informes con análisis detallados, ensayos de laboratorio y recomendaciones constructivas, respaldados por acreditación INACAL-DA.</p>
+          <div data-reveal="" style="margin-top:40px;display:flex;flex-wrap:wrap;gap:8px">
+            <span style="border:1px solid rgba(237,231,219,0.2);padding:9px 15px;font-size:13px;font-family:'IBM Plex Mono',monospace;letter-spacing:0.02em">Cimentaciones</span>
+            <span style="border:1px solid rgba(237,231,219,0.2);padding:9px 15px;font-size:13px;font-family:'IBM Plex Mono',monospace">Pavimentos</span>
+            <span style="border:1px solid rgba(237,231,219,0.2);padding:9px 15px;font-size:13px;font-family:'IBM Plex Mono',monospace">Taludes y laderas</span>
+            <span style="border:1px solid rgba(237,231,219,0.2);padding:9px 15px;font-size:13px;font-family:'IBM Plex Mono',monospace">Agua y alcantarillado</span>
+            <span style="border:1px solid rgba(237,231,219,0.2);padding:9px 15px;font-size:13px;font-family:'IBM Plex Mono',monospace">Riego tecnificado</span>
+            <span style="border:1px solid rgba(237,231,219,0.2);padding:9px 15px;font-size:13px;font-family:'IBM Plex Mono',monospace">ITS edificaciones</span>
+            <span style="border:1px solid rgba(237,231,219,0.2);padding:9px 15px;font-size:13px;font-family:'IBM Plex Mono',monospace">Diseño de mezclas</span>
+            <span style="border:1px solid rgba(237,231,219,0.2);padding:9px 15px;font-size:13px;font-family:'IBM Plex Mono',monospace">Canteras</span>
+            <span style="border:1px solid rgba(237,231,219,0.2);padding:9px 15px;font-size:13px;font-family:'IBM Plex Mono',monospace">Percolación</span>
+            <span style="border:1px solid rgba(237,231,219,0.2);padding:9px 15px;font-size:13px;font-family:'IBM Plex Mono',monospace">Asesoría en obra</span>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <div data-reveal="" style="position:relative;overflow:hidden;aspect-ratio:3/4"><img src="img/calicata-opt.jpg" alt="Caja de testigos" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></div>
+          <div data-reveal="" style="position:relative;overflow:hidden;aspect-ratio:3/4"><img src="img/spt-santiago-opt.jpg" alt="Ensayo SPT" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="laboratorio" data-depth="12.30" data-strata="ROCA ALTERADA" style="position:relative;padding:150px 40px;background:#1A1712;border-top:1px solid rgba(237,231,219,0.1);border-bottom:1px solid rgba(237,231,219,0.1)">
+      <div style="max-width:1180px">
+        <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:40px;flex-wrap:wrap">
+          <div>
+            <div data-reveal="" style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.3em;color:#8A5230">04 — LABORATORIO</div>
+            <h2 data-reveal="" style="margin:18px 0 0;font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(32px,4.6vw,64px);line-height:0.98;letter-spacing:-0.035em">Suelos, concreto<br>y agregados</h2>
+          </div>
+          <div data-reveal="" style="display:flex;align-items:center;gap:14px;border:1px solid #4FA83A;padding:14px 20px">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#7FCF52" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 11 3 3L22 4"></path><path d="M21 12a9 9 0 1 1-6.2-8.6"></path></svg>
+            <div>
+              <div style="font-family:Archivo,sans-serif;font-weight:700;font-size:15px">Acreditación INACAL-DA</div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.2em;color:rgba(237,231,219,0.5);margin-top:3px">ESTÁNDAR ISO 17025</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:66px;display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1px;background:rgba(237,231,219,0.12)">
+          <div data-reveal="" style="background:#1A1712;padding:32px 30px 36px"><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.24em;color:#7FCF52">CLASIFICACIÓN</div><p style="margin:14px 0 0;font-size:15px;line-height:1.7;color:rgba(237,231,219,0.7);font-weight:300">Contenido de humedad · Granulometría por tamizado · Límites de Atterberg · Clasificación SUCS y AASHTO</p></div>
+          <div data-reveal="" style="background:#1A1712;padding:32px 30px 36px"><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.24em;color:#7FCF52">ESPECIALES PARA SUELO</div><p style="margin:14px 0 0;font-size:15px;line-height:1.7;color:rgba(237,231,219,0.7);font-weight:300">Proctor estándar y modificado · CBR · Corte directo · Consolidación · Triaxial · Permeabilidad · Límite de contracción</p></div>
+          <div data-reveal="" style="background:#1A1712;padding:32px 30px 36px"><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.24em;color:#7FCF52">AGREGADOS</div><p style="margin:14px 0 0;font-size:15px;line-height:1.7;color:rgba(237,231,219,0.7);font-weight:300">Abrasión Los Ángeles · Peso específico y absorción · Peso unitario · Equivalente de arena · Sales solubles · Partículas chatas · Durabilidad al sulfato</p></div>
+          <div data-reveal="" style="background:#1A1712;padding:32px 30px 36px"><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.24em;color:#C97A44">QUÍMICOS</div><p style="margin:14px 0 0;font-size:15px;line-height:1.7;color:rgba(237,231,219,0.7);font-weight:300">pH · Sales solubles totales · Materia orgánica · Sulfatos y cloruros · Reactividad álcali-sílice · Azul de metileno · Impurezas orgánicas</p></div>
+          <div data-reveal="" style="background:#1A1712;padding:32px 30px 36px"><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.24em;color:#C97A44">CONCRETO FRESCO</div><p style="margin:14px 0 0;font-size:15px;line-height:1.7;color:rgba(237,231,219,0.7);font-weight:300">Slump · Temperatura · Peso unitario · Contenido de aire · Tiempo de fraguado · Elaboración y curado de especímenes</p></div>
+          <div data-reveal="" style="background:#1A1712;padding:32px 30px 36px"><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.24em;color:#C97A44">ENDURECIDO Y MORTEROS</div><p style="margin:14px 0 0;font-size:15px;line-height:1.7;color:rgba(237,231,219,0.7);font-weight:300">Rotura de probetas y testigos · Flexión de vigas · Tracción diametral · Módulo de elasticidad · Cubos de mortero · Fluidez</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section data-depth="16.80" data-strata="ENSAYOS IN SITU" style="position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;padding:140px 40px">
+      <img data-parallax="0.16" src="img/spt-urbano-opt.jpg" alt="" style="position:absolute;inset:-10% 0;width:100%;height:120%;object-fit:cover;opacity:0.42">
+      <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,16,13,0.95) 30%,rgba(18,16,13,0.35) 100%)"></div>
+      <div style="position:relative;max-width:1180px;width:100%">
+        <div data-reveal="" style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.3em;color:#7FCF52">05 — TRABAJOS DE CAMPO</div>
+        <h2 data-reveal="" style="margin:18px 0 0;font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(32px,5vw,70px);line-height:0.95;letter-spacing:-0.04em;max-width:14ch">Resultados confiables al instante, en obra</h2>
+
+        <div style="margin-top:56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:1px;background:rgba(237,231,219,0.14);max-width:1000px">
+          <div data-reveal="" style="background:#12100D;padding:26px 22px 28px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7FCF52" stroke-width="1.3" stroke-linecap="round"><path d="M12 3v18M5 21h14M12 3 5 21M12 3l7 18"></path></svg><div style="margin-top:14px;font-size:14px;line-height:1.5;color:rgba(237,231,219,0.85)">Penetración estándar SPT y liviana DPL</div></div>
+          <div data-reveal="" style="background:#12100D;padding:26px 22px 28px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7FCF52" stroke-width="1.3" stroke-linecap="round"><path d="M12 2v7"></path><path d="m8 9 4 12 4-12z"></path></svg><div style="margin-top:14px;font-size:14px;line-height:1.5;color:rgba(237,231,219,0.85)">Densidad de campo por cono de arena</div></div>
+          <div data-reveal="" style="background:#12100D;padding:26px 22px 28px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7FCF52" stroke-width="1.3" stroke-linecap="round"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M3 10h18M9 10v10"></path></svg><div style="margin-top:14px;font-size:14px;line-height:1.5;color:rgba(237,231,219,0.85)">Muestreo y perfil estratigráfico</div></div>
+          <div data-reveal="" style="background:#12100D;padding:26px 22px 28px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7FCF52" stroke-width="1.3" stroke-linecap="round"><path d="M12 21a9 9 0 1 0-9-9"></path><path d="M3 12h4M12 12l4-4"></path></svg><div style="margin-top:14px;font-size:14px;line-height:1.5;color:rgba(237,231,219,0.85)">Humedad en campo, método Speedy</div></div>
+          <div data-reveal="" style="background:#12100D;padding:26px 22px 28px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7FCF52" stroke-width="1.3" stroke-linecap="round"><path d="M4 20h16M6 20V9l6-5 6 5v11"></path><path d="M10 20v-5h4v5"></path></svg><div style="margin-top:14px;font-size:14px;line-height:1.5;color:rgba(237,231,219,0.85)">Esclerometría y extracción de testigos</div></div>
+          <div data-reveal="" style="background:#12100D;padding:26px 22px 28px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7FCF52" stroke-width="1.3" stroke-linecap="round"><path d="M3 17h18M3 12h18M3 7h18"></path><path d="M7 7v10"></path></svg><div style="margin-top:14px;font-size:14px;line-height:1.5;color:rgba(237,231,219,0.85)">Ensayo de carga con placa, CBR in situ</div></div>
+          <div data-reveal="" style="background:#12100D;padding:26px 22px 28px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7FCF52" stroke-width="1.3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"></path></svg><div style="margin-top:14px;font-size:14px;line-height:1.5;color:rgba(237,231,219,0.85)">Densidad y humedad en rellenos y subrasante</div></div>
+          <div data-reveal="" style="background:#12100D;padding:26px 22px 28px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7FCF52" stroke-width="1.3" stroke-linecap="round"><rect x="3" y="14" width="18" height="6" rx="1"></rect><rect x="6" y="8" width="12" height="6" rx="1"></rect><rect x="9" y="2" width="6" height="6" rx="1"></rect></svg><div style="margin-top:14px;font-size:14px;line-height:1.5;color:rgba(237,231,219,0.85)">Control de compactación en terraplenes</div></div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <section data-depth="21.50" data-strata="BASAMENTO ROCOSO" style="position:relative;padding:150px 40px">
+      
+    <div style="max-width:1180px;display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:76px;align-items:center">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <div data-reveal="" style="position: relative; overflow: hidden; grid-column: span 2; width: 508px; height: 657px"><img src="./img_2032-jpg-mt867pnr-cgrk-opt.jpg" alt="Equipo de geofísica en campo" width="4032" height="3024" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;object-position:center"></div>
+          
+          
+        </div>
+        <div>
+          <div data-reveal="" style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.3em;color:#8A5230">06 — GEOFÍSICA</div>
+          <h2 data-reveal="" style="margin:18px 0 0;font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(32px,4.4vw,60px);line-height:0.98;letter-spacing:-0.035em">Ver el subsuelo sin excavarlo</h2>
+          <p data-reveal="" style="margin:24px 0 0;font-size:17px;line-height:1.65;color:rgba(237,231,219,0.66);font-weight:300;max-width:56ch">Métodos no invasivos que brindan información continua del subsuelo para geotecnia, hidrogeología, minería, ingeniería civil y medio ambiente.</p>
+          <div style="margin-top:40px;display:grid;gap:1px;background:rgba(237,231,219,0.14)">
+            <div data-reveal="" style="background:#12100D;display:flex;align-items:center;gap:18px;padding:18px 4px"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8A5230;width:28px">A</span><span style="font-family:Archivo,sans-serif;font-weight:600;font-size:19px">Refracción sísmica</span></div>
+            <div data-reveal="" style="background:#12100D;display:flex;align-items:center;gap:18px;padding:18px 4px"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8A5230;width:28px">B</span><span style="font-family:Archivo,sans-serif;font-weight:600;font-size:19px">Ondas superficiales MASW 1D-2D</span></div>
+            <div data-reveal="" style="background:#12100D;display:flex;align-items:center;gap:18px;padding:18px 4px"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8A5230;width:28px">C</span><span style="font-family:Archivo,sans-serif;font-weight:600;font-size:19px">Matriz de microtremores MAM-REMI</span></div>
+            <div data-reveal="" style="background:#12100D;display:flex;align-items:center;gap:18px;padding:18px 4px"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8A5230;width:28px">D</span><span style="font-family:Archivo,sans-serif;font-weight:600;font-size:19px">Tomografía de resistividad ERT 2D-3D</span></div>
+            <div data-reveal="" style="background:#12100D;display:flex;align-items:center;gap:18px;padding:18px 4px"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8A5230;width:28px">E</span><span style="font-family:Archivo,sans-serif;font-weight:600;font-size:19px">Sondeo eléctrico vertical SEV</span></div>
+            <div data-reveal="" style="background:#12100D;display:flex;align-items:center;gap:18px;padding:18px 4px"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8A5230;width:28px">F</span><span style="font-family:Archivo,sans-serif;font-weight:600;font-size:19px">Microtremores HVSR</span></div>
+          </div>
+        </div>
+      </div></section><section data-depth="26.00" data-strata="NIVEL FREÁTICO" style="position:relative;padding:150px 40px;background:#EDE7DB;color:#1A1712">
+      <div style="max-width:1180px">
+        <div data-reveal="" style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.3em;color:#8A5230">07 — MEDIO AMBIENTE</div>
+        <h2 data-reveal="" style="margin:18px 0 0;font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(32px,5vw,70px);line-height:0.95;letter-spacing:-0.04em;max-width:18ch">Cumplimiento ambiental y gestión social</h2>
+
+        <div style="margin-top:66px;display:grid;grid-template-columns:repeat(auto-fit,minmax(275px,1fr));gap:52px 46px">
+          <div data-reveal="" style="border-top:2px solid #4FA83A;padding-top:22px"><h3 style="margin:0;font-family:Archivo,sans-serif;font-weight:700;font-size:21px">Monitoreos ambientales</h3><p style="margin:12px 0 0;font-size:15px;line-height:1.7;color:rgba(26,23,18,0.66)">Calidad de agua: parámetros de campo, microbiológico, barrido de metales. Calidad de aire: PM10, PM2.5, meteorología. Ruido diurno y nocturno. Suelos.</p></div>
+          <div data-reveal="" style="border-top:2px solid #4FA83A;padding-top:22px"><h3 style="margin:0;font-family:Archivo,sans-serif;font-weight:700;font-size:21px">Instrumentos de gestión</h3><p style="margin:12px 0 0;font-size:15px;line-height:1.7;color:rgba(26,23,18,0.66)">Preventivos: EVAP, DIA, EIAsd. Correctivos: DAA, DAAC, PAMA. Complementarios: ITS, planes de cierre, FTA, PAD.</p></div>
+          <div data-reveal="" style="border-top:2px solid #4FA83A;padding-top:22px"><h3 style="margin:0;font-family:Archivo,sans-serif;font-weight:700;font-size:21px">Biodiversidad</h3><p style="margin:12px 0 0;font-size:15px;line-height:1.7;color:rgba(26,23,18,0.66)">Línea base biológica de flora, fauna e hidrobiología. Monitoreo biológico, caracterización de cuerpos de agua y asesoría en conservación.</p></div>
+          <div data-reveal="" style="border-top:2px solid #8A5230;padding-top:22px"><h3 style="margin:0;font-family:Archivo,sans-serif;font-weight:700;font-size:21px">Residuos sólidos</h3><p style="margin:12px 0 0;font-size:15px;line-height:1.7;color:rgba(26,23,18,0.66)">Estudio de caracterización y plan de manejo de residuos sólidos.</p></div>
+          <div data-reveal="" style="border-top:2px solid #8A5230;padding-top:22px"><h3 style="margin:0;font-family:Archivo,sans-serif;font-weight:700;font-size:21px">Minería y patrimonio</h3><p style="margin:12px 0 0;font-size:15px;line-height:1.7;color:rgba(26,23,18,0.66)">IGAFOM y plan de minado. Ministerio de Cultura: CIRAS, informe de reconocimiento arqueológico y diagnóstico de sitios culturales.</p></div>
+          <div data-reveal="" style="border-top:2px solid #8A5230;padding-top:22px"><h3 style="margin:0;font-family:Archivo,sans-serif;font-weight:700;font-size:21px">Gestión social y predial</h3><p style="margin:12px 0 0;font-size:15px;line-height:1.7;color:rgba(26,23,18,0.66)">Línea base socioeconómica, monitoreos participativos, mapeo de actores, plan de relaciones comunitarias y asesoría legal predial.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section data-depth="28.20" data-strata="REFERENCIAS" style="position:relative;padding:120px 0;border-top:1px solid rgba(237,231,219,0.1);overflow:hidden">
+      <div style="padding:0 40px;max-width:1180px">
+        <div data-reveal="" style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.3em;color:#8A5230">08 — NUESTROS CLIENTES</div>
+        <h2 data-reveal="" style="margin:18px 0 0;font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(30px,4vw,54px);line-height:1;letter-spacing:-0.035em">Entidades que confían en nosotros</h2>
+      </div>
+
+      <div style="margin-top:56px;position:relative;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)">
+        <div data-marquee="" style="display:flex;width:max-content;animation:marquee 46s linear infinite">
+          <div style="display:flex;align-items:center;gap:22px;padding-right:22px">
+            <div style="flex:none;width:180px;height:112px;background:#EDE7DB;border-radius:4px;display:flex;align-items:center;justify-content:center;padding:16px;box-sizing:border-box"><img src="img/clientes/grc.png" alt="Gobierno Regional Cusco" style="max-width:100%;max-height:100%;object-fit:contain"></div>
+            <div style="flex:none;width:180px;height:112px;background:#EDE7DB;border-radius:4px;display:flex;align-items:center;justify-content:center;padding:16px;box-sizing:border-box"><img src="img/clientes/provias.png" alt="PROVÍAS Descentralizado" style="max-width:100%;max-height:100%;object-fit:contain"></div>
+            <div style="flex:none;width:180px;height:112px;background:#EDE7DB;border-radius:4px;display:flex;align-items:center;justify-content:center;padding:16px;box-sizing:border-box"><img src="img/clientes/apurimac.png" alt="Gobierno Regional Apurímac" style="max-width:100%;max-height:100%;object-fit:contain"></div>
+            <div style="flex:none;width:180px;height:112px;background:#EDE7DB;border-radius:4px;display:flex;align-items:center;justify-content:center;padding:16px;box-sizing:border-box"><img src="img/clientes/pescs.png" alt="Proyecto Especial Sierra Centro Sur" style="max-width:100%;max-height:100%;object-fit:contain"></div>
+            <div style="flex:none;width:180px;height:112px;background:#EDE7DB;border-radius:4px;display:flex;align-items:center;justify-content:center;padding:16px;box-sizing:border-box"><img src="img/clientes/madrededios.png" alt="Región Madre de Dios" style="max-width:100%;max-height:100%;object-fit:contain"></div>
+            <div style="flex:none;width:180px;height:112px;background:#EDE7DB;border-radius:4px;display:flex;align-items:center;justify-content:center;padding:16px;box-sizing:border-box"><img src="img/clientes/ima.png" alt="Instituto de Manejo de Agua y Medio Ambiente" style="max-width:100%;max-height:100%;object-fit:contain"></div>
+            <div style="flex:none;width:180px;height:112px;background:#EDE7DB;border-radius:4px;display:flex;align-items:center;justify-content:center;padding:16px;box-sizing:border-box"><img src="img/clientes/copesco.png" alt="Plan COPESCO" style="max-width:100%;max-height:100%;object-fit:contain"></div>
+          </div>
+          <div aria-hidden="true" style="display:flex;align-items:center;gap:22px;padding-right:22px">
+            <div style="flex:none;width:180px;height:112px;background:#EDE7DB;border-radius:4px;display:flex;align-items:center;justify-content:center;padding:16px;box-sizing:border-box"><img src="img/clientes/grc.png" alt="" style="max-width:100%;max-height:100%;object-fit:contain"></div>
+            <div style="flex:none;width:180px;height:112px;background:#EDE7DB;border-radius:4px;display:flex;align-items:center;justify-content:center;padding:16px;box-sizing:border-box"><img src="img/clientes/provias.png" alt="" style="max-width:100%;max-height:100%;object-fit:contain"></div>
+            <div style="flex:none;width:180px;height:112px;background:#EDE7DB;border-radius:4px;display:flex;align-items:center;justify-content:center;padding:16px;box-sizing:border-box"><img src="img/clientes/apurimac.png" alt="" style="max-width:100%;max-height:100%;object-fit:contain"></div>
+            <div style="flex:none;width:180px;height:112px;background:#EDE7DB;border-radius:4px;display:flex;align-items:center;justify-content:center;padding:16px;box-sizing:border-box"><img src="img/clientes/pescs.png" alt="" style="max-width:100%;max-height:100%;object-fit:contain"></div>
+            <div style="flex:none;width:180px;height:112px;background:#EDE7DB;border-radius:4px;display:flex;align-items:center;justify-content:center;padding:16px;box-sizing:border-box"><img src="img/clientes/madrededios.png" alt="" style="max-width:100%;max-height:100%;object-fit:contain"></div>
+            <div style="flex:none;width:180px;height:112px;background:#EDE7DB;border-radius:4px;display:flex;align-items:center;justify-content:center;padding:16px;box-sizing:border-box"><img src="img/clientes/ima.png" alt="" style="max-width:100%;max-height:100%;object-fit:contain"></div>
+            <div style="flex:none;width:180px;height:112px;background:#EDE7DB;border-radius:4px;display:flex;align-items:center;justify-content:center;padding:16px;box-sizing:border-box"><img src="img/clientes/copesco.png" alt="" style="max-width:100%;max-height:100%;object-fit:contain"></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="padding:64px 40px 0;max-width:1180px;display:flex;flex-wrap:wrap;align-items:center;gap:26px">
+        <div data-reveal="" style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.3em;color:rgba(237,231,219,0.5)">CERTIFICACIONES</div>
+        <div data-reveal="" style="display:flex;gap:16px;align-items:center">
+          <img src="img/inacal.png" alt="INACAL DA Perú acreditado" style="height:74px;background:#EDE7DB;padding:8px 12px;border-radius:4px">
+          <img src="img/iso17025.png" alt="ISO 17025" style="height:74px;background:#EDE7DB;padding:8px;border-radius:4px">
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" data-depth="30.00" data-strata="FIN DE SONDAJE" style="position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;overflow:hidden;padding:140px 40px 60px">
+      <img data-parallax="0.12" src="img/spt-patio-opt.jpg" alt="" style="position:absolute;inset:-10% 0;width:100%;height:120%;object-fit:cover;opacity:0.3">
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,16,13,0.94),rgba(18,16,13,0.8))"></div>
+      <div style="position:relative;max-width:1180px;width:100%">
+        <img data-reveal="" src="img/logo.png" alt="PRO INGEMA S.A.C." style="width:96px;height:96px;object-fit:contain;background:#EDE7DB;border-radius:4px;padding:10px">
+        <h2 data-reveal="" style="margin:38px 0 0;font-family:Archivo,sans-serif;font-weight:900;font-size:clamp(40px,7.6vw,116px);line-height:0.88;letter-spacing:-0.045em">Conversemos<br>sobre su <span style="color:#7FCF52">proyecto</span></h2>
+
+        <div style="margin-top:58px;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px">
+          <a data-reveal="" href="tel:974260151" style="background:#12100D;border-top:1px solid rgba(237,231,219,0.18);padding:28px 24px 30px;color:#EDE7DB"><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.24em;color:#7FCF52">TELÉFONO</div><div style="margin-top:12px;font-family:Archivo,sans-serif;font-weight:700;font-size:22px;white-space:nowrap">974 260 151</div></a>
+          <a data-reveal="" href="mailto:proingemasac@gmail.com" style="background:#12100D;border-top:1px solid rgba(237,231,219,0.18);padding:28px 24px 30px;color:#EDE7DB"><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.24em;color:#7FCF52">CORREO</div><div style="margin-top:12px;font-family:Archivo,sans-serif;font-weight:700;font-size:clamp(14px,1.4vw,17px);word-break:break-word">proingemasac@gmail.com</div></a>
+          <a data-reveal="" href="https://www.proingemasac.com" style="background:#12100D;border-top:1px solid rgba(237,231,219,0.18);padding:28px 24px 30px;color:#EDE7DB"><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.24em;color:#7FCF52">WEB</div><div style="margin-top:12px;font-family:Archivo,sans-serif;font-weight:700;font-size:17px">proingemasac.com</div></a>
+          <div data-reveal="" style="background:#12100D;border-top:1px solid rgba(237,231,219,0.18);padding:28px 24px 30px"><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.24em;color:#7FCF52">OFICINA</div><div style="margin-top:12px;font-size:15px;line-height:1.5;color:rgba(237,231,219,0.85)">A.P.V San Antonio E-6-4<br>San Sebastián, Cusco</div></div>
+        </div>
+
+        <div style="margin-top:70px;padding-top:28px;border-top:1px solid rgba(237,231,219,0.14);display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap">
+          <div style="display:flex;gap:14px;align-items:center">
+            <img src="img/inacal.png" alt="INACAL DA Perú" style="height:76px;background:#EDE7DB;padding:6px;border-radius:4px">
+            <img src="img/iso17025.png" alt="ISO 17025" style="height:76px;background:#EDE7DB;padding:6px;border-radius:4px">
+          </div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.2em;color:rgba(237,231,219,0.4)">RUC 20604572321 · PROINGEMA S.A.C.</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+<div style="position: fixed; top: -4px; left: -71px; width: 100%; height: 100%; pointer-events: none; z-index: 60; opacity: 0.05; background-image: repeating-linear-gradient(0deg,#EDE7DB 0 1px,transparent 1px 4px)"></div></div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.railFill = React.createRef();
+    this.railDot = React.createRef();
+    this.depthOut = React.createRef();
+  }
+
+  renderVals() {
+    return { railFill: this.railFill, railDot: this.railDot, depthOut: this.depthOut };
+  }
+
+  componentDidMount() {
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const items = Array.from(document.querySelectorAll('[data-reveal]'));
+    this._show = (el) => {
+      el.style.opacity = '1';
+      el.style.transform = 'none';
+      el.style.filter = 'none';
+    };
+
+    // Only hide what is BELOW the fold: anything already on screen must never
+    // depend on an async callback (rAF / IntersectionObserver) to become visible.
+    this._pending = [];
+    const fold = window.innerHeight * 0.9;
+    items.forEach((el, i) => {
+      el.style.transition = 'opacity 900ms cubic-bezier(0.16,1,0.3,1), transform 1000ms cubic-bezier(0.16,1,0.3,1), filter 900ms cubic-bezier(0.16,1,0.3,1)';
+      el.style.transitionDelay = (Math.min(i % 8, 6) * 70) + 'ms';
+      if (reduce || el.getBoundingClientRect().top < fold) { this._show(el); return; }
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(26px)';
+      el.style.filter = 'blur(6px)';
+      this._pending.push(el);
+    });
+
+    this._sweep = () => {
+      if (!this._pending.length) return;
+      const trigger = window.innerHeight * 0.9;
+      const still = [];
+      for (const el of this._pending) {
+        if (el.getBoundingClientRect().top < trigger) this._show(el);
+        else still.push(el);
+      }
+      this._pending = still;
+    };
+
+    // Safety net: if neither scroll events nor rAF ever fire, reveal everything.
+    this._net = setTimeout(() => { this._pending.splice(0).forEach(this._show); }, 1500);
+
+    this._parallax = Array.from(document.querySelectorAll('[data-parallax]'));
+    this._sections = Array.from(document.querySelectorAll('section[data-depth]'));
+
+    let ticking = false;
+    this._onScroll = () => {
+      this._sweep();
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        ticking = false;
+        const doc = document.documentElement;
+        const max = Math.max(1, doc.scrollHeight - window.innerHeight);
+        const p = Math.min(1, Math.max(0, window.scrollY / max));
+
+        if (this.railFill.current) this.railFill.current.style.height = (p * 100) + '%';
+        if (this.railDot.current) this.railDot.current.style.top = 'calc(' + (p * 100) + '% - 8px)';
+
+        // depth reads from the section currently crossing the viewport middle
+        const mid = window.scrollY + window.innerHeight * 0.5;
+        let cur = this._sections[0], next = null;
+        for (let i = 0; i < this._sections.length; i++) {
+          const s = this._sections[i];
+          if (s.offsetTop <= mid) { cur = s; next = this._sections[i + 1] || null; }
+        }
+        if (cur && this.depthOut.current) {
+          const d0 = parseFloat(cur.dataset.depth);
+          const d1 = next ? parseFloat(next.dataset.depth) : d0;
+          const span = Math.max(1, (next ? next.offsetTop : cur.offsetTop + cur.offsetHeight) - cur.offsetTop);
+          const t = Math.min(1, Math.max(0, (mid - cur.offsetTop) / span));
+          this.depthOut.current.textContent = (d0 + (d1 - d0) * t).toFixed(2);
+        }
+
+        if (!reduce) {
+          this._parallax.forEach((img) => {
+            const r = img.getBoundingClientRect();
+            const off = (r.top + r.height / 2 - window.innerHeight / 2) * parseFloat(img.dataset.parallax);
+            img.style.transform = 'translate3d(0,' + (-off) + 'px,0)';
+          });
+        }
+      });
+    };
+
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    window.addEventListener('resize', this._onScroll);
+    this._onScroll();
+  }
+
+  componentWillUnmount() {
+    clearTimeout(this._net);
+    window.removeEventListener('scroll', this._onScroll);
+    window.removeEventListener('resize', this._onScroll);
+  }
+}
+</script>
+</body>
+</html>
