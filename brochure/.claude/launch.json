@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "niki-dev",
+      "runtimeExecutable": "C:/Users/jef_o/AppData/Roaming/npm/npmw.cmd",
+      "runtimeArgs": [],
+      "port": 4173
+    },
+    {
+      "name": "brochure-static",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["_serve.js"],
+      "port": 5173
+    }
+  ]
+}

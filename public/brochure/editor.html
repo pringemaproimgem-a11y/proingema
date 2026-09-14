@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor de Contenido - Brochure</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: #12100D;
+            color: #EDE7DB;
+            padding: 30px 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 16px;
+            opacity: 0.8;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .section {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-left: 4px solid #7FCF52;
+        }
+
+        .section h2 {
+            color: #12100D;
+            font-size: 18px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section-number {
+            display: inline-flex;
+            width: 28px;
+            height: 28px;
+            align-items: center;
+            justify-content: center;
+            background: #7FCF52;
+            color: white;
+            border-radius: 50%;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            color: #12100D;
+            margin-bottom: 6px;
+            font-size: 13px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="url"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        input[type="url"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #7FCF52;
+            box-shadow: 0 0 0 3px rgba(127, 207, 82, 0.1);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+            font-family: 'Source Sans 3', sans-serif;
+        }
+
+        .help-text {
+            font-size: 12px;
+            color: #666;
+            margin-top: 4px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+
+        button {
+            flex: 1;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: #7FCF52;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #4FA83A;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(79, 168, 58, 0.3);
+        }
+
+        .btn-secondary {
+            background: #e0e0e0;
+            color: #333;
+        }
+
+        .btn-secondary:hover {
+            background: #d0d0d0;
+        }
+
+        .image-section {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .image-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .image-item {
+            background: white;
+            padding: 12px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        .image-item-name {
+            font-size: 12px;
+            font-weight: 600;
+            color: #12100D;
+            margin-top: 8px;
+            word-break: break-word;
+        }
+
+        .image-item-path {
+            font-size: 11px;
+            color: #999;
+            margin-top: 4px;
+            font-family: monospace;
+        }
+
+        .alert {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            color: #856404;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        .alert-success {
+            background: #d4edda;
+            border-color: #c3e6cb;
+            color: #155724;
+        }
+
+        .info-box {
+            background: #e7f3ff;
+            border-left: 4px solid #2196F3;
+            padding: 12px;
+            border-radius: 4px;
+            font-size: 13px;
+            color: #1565c0;
+            margin-top: 10px;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .tab-btn {
+            background: none;
+            border: none;
+            padding: 12px 16px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            color: #666;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .tab-btn.active {
+            color: #7FCF52;
+            border-bottom-color: #7FCF52;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .code-block {
+            background: #f5f5f5;
+            padding: 12px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            overflow-x: auto;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        .copy-btn {
+            background: #666;
+            color: white;
+            padding: 6px 12px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 12px;
+            margin-top: 8px;
+        }
+
+        .copy-btn:hover {
+            background: #444;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>✏️ Editor de Contenido - Brochure</h1>
+            <p>Edita toda la información manteniendo el diseño intacto</p>
+        </header>
+
+        <div class="alert">
+            <strong>📌 Importante:</strong> Este editor te ayuda a ver dónde está cada elemento. Para editar, abre el archivo <code>public/brochure/index.html</code> en tu editor de código favorito.
+        </div>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab('contenido')">📝 Contenido</button>
+            <button class="tab-btn" onclick="switchTab('imagenes')">🖼️ Imágenes</button>
+            <button class="tab-btn" onclick="switchTab('guia')">📖 Guía</button>
+        </div>
+
+        <!-- TAB: CONTENIDO -->
+        <div id="contenido" class="tab-content active">
+            <div class="grid">
+                <!-- HERO -->
+                <div class="section">
+                    <h2><span class="section-number">H</span> HERO / PORTADA</h2>
+                    <div class="form-group">
+                        <label>Localización y año</label>
+                        <input type="text" value="CUSCO · PERÚ · DESDE 2011" readonly>
+                        <div class="help-text">Línea 82: Ubicación y año de fundación</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Título principal</label>
+                        <textarea readonly>Leemos
+el suelo
+antes de construir</textarea>
+                        <div class="help-text">Línea 84: Tu mensaje principal (puedes usar &lt;br&gt; para saltos)</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Descripción</label>
+                        <textarea readonly>Estudios geotécnicos, geológicos y ambientales con laboratorio propio de mecánica de suelos y materiales de construcción.</textarea>
+                        <div class="help-text">Línea 86: Breve descripción de servicios</div>
+                    </div>
+                    <div class="info-box">
+                        📸 Imagen: <code>img/atardecer-opt.jpg</code> (fondo con opacidad)
+                    </div>
+                </div>
+
+                <!-- QUIÉNES SOMOS -->
+                <div class="section">
+                    <h2><span class="section-number">1</span> QUIÉNES SOMOS</h2>
+                    <div class="form-group">
+                        <label>Encabezado</label>
+                        <input type="text" value="Ingeniería cusqueña con alcance nacional" readonly>
+                        <div class="help-text">Línea 100: Título principal de la sección</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Años de operación</label>
+                        <input type="text" value="14" readonly>
+                        <div class="help-text">Línea 120: Número de años</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Razón social</label>
+                        <input type="text" value="PROINGEMA S.A.C." readonly>
+                        <div class="help-text">Línea 127: Nombre legal de la empresa</div>
+                    </div>
+                    <div class="form-group">
+                        <label>RUC</label>
+                        <input type="text" value="20604572321" readonly>
+                        <div class="help-text">Línea 128: Número de RUC</div>
+                    </div>
+                    <div class="info-box">
+                        📸 Imagen: <code>img/equipo-oficina-full-opt.jpg</code> (4:3)
+                    </div>
+                </div>
+
+                <!-- SERVICIOS -->
+                <div class="section">
+                    <h2><span class="section-number">2</span> SERVICIOS</h2>
+                    <div class="form-group">
+                        <label>Título</label>
+                        <input type="text" value="Cuatro líneas de especialidad" readonly>
+                        <div class="help-text">Línea 137: Encabezado de la sección</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Servicio 1</label>
+                        <input type="text" value="Ingeniería geotécnica" readonly>
+                        <div class="help-text">Línea 142: Nombre del primer servicio</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Servicio 2</label>
+                        <input type="text" value="Laboratorio de suelos y concreto" readonly>
+                        <div class="help-text">Línea 148: Nombre del segundo servicio</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Servicio 3</label>
+                        <input type="text" value="Servicios geofísicos" readonly>
+                        <div class="help-text">Línea 154: Nombre del tercer servicio</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Servicio 4</label>
+                        <input type="text" value="Medio ambiente y gestión social" readonly>
+                        <div class="help-text">Línea 160: Nombre del cuarto servicio</div>
+                    </div>
+                </div>
+
+                <!-- CONTACTO -->
+                <div class="section">
+                    <h2><span class="section-number">C</span> CONTACTO</h2>
+                    <div class="form-group">
+                        <label>Teléfono</label>
+                        <input type="tel" value="974 260 151" readonly>
+                        <div class="help-text">Línea 326: Número telefónico</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" value="proingemasac@gmail.com" readonly>
+                        <div class="help-text">Línea 327: Correo electrónico</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Sitio web</label>
+                        <input type="url" value="proingemasac.com" readonly>
+                        <div class="help-text">Línea 328: Sitio web (sin https://)</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Dirección</label>
+                        <textarea readonly>A.P.V San Antonio E-6-4
+San Sebastián, Cusco</textarea>
+                        <div class="help-text">Línea 329: Dirección de oficina</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: IMÁGENES -->
+        <div id="imagenes" class="tab-content">
+            <div class="section">
+                <h2>🖼️ IMÁGENES DEL BROCHURE</h2>
+                <p style="margin-bottom: 15px; color: #666;">Ubica: <code>public/brochure/img/</code></p>
+
+                <h3 style="margin-top: 20px; margin-bottom: 10px; font-size: 16px; color: #12100D;">Imágenes principales</h3>
+                <div class="image-list">
+                    <div class="image-item">
+                        <div style="width:100%; height:100px; background:#ddd; display:flex; align-items:center; justify-content:center; border-radius:4px;">
+                            <span style="color:#999;">Logo</span>
+                        </div>
+                        <div class="image-item-name">logo.png</div>
+                        <div class="image-item-path">Header + Footer</div>
+                    </div>
+                    <div class="image-item">
+                        <div style="width:100%; height:100px; background:#ddd; display:flex; align-items:center; justify-content:center; border-radius:4px;">
+                            <span style="color:#999;">Fondo</span>
+                        </div>
+                        <div class="image-item-name">atardecer-opt.jpg</div>
+                        <div class="image-item-path">Hero/Portada</div>
+                    </div>
+                    <div class="image-item">
+                        <div style="width:100%; height:100px; background:#ddd; display:flex; align-items:center; justify-content:center; border-radius:4px;">
+                            <span style="color:#999;">Equipo</span>
+                        </div>
+                        <div class="image-item-name">equipo-oficina-full-opt.jpg</div>
+                        <div class="image-item-path">Sección About</div>
+                    </div>
+                    <div class="image-item">
+                        <div style="width:100%; height:100px; background:#ddd; display:flex; align-items:center; justify-content:center; border-radius:4px;">
+                            <span style="color:#999;">Foto 1</span>
+                        </div>
+                        <div class="image-item-name">calicata-opt.jpg</div>
+                        <div class="image-item-path">Geotecnia (3:4)</div>
+                    </div>
+                    <div class="image-item">
+                        <div style="width:100%; height:100px; background:#ddd; display:flex; align-items:center; justify-content:center; border-radius:4px;">
+                            <span style="color:#999;">Foto 2</span>
+                        </div>
+                        <div class="image-item-name">spt-santiago-opt.jpg</div>
+                        <div class="image-item-path">Geotecnia (3:4)</div>
+                    </div>
+                    <div class="image-item">
+                        <div style="width:100%; height:100px; background:#ddd; display:flex; align-items:center; justify-content:center; border-radius:4px;">
+                            <span style="color:#999;">Fondo</span>
+                        </div>
+                        <div class="image-item-name">spt-urbano-opt.jpg</div>
+                        <div class="image-item-path">Trabajos de Campo</div>
+                    </div>
+                    <div class="image-item">
+                        <div style="width:100%; height:100px; background:#ddd; display:flex; align-items:center; justify-content:center; border-radius:4px;">
+                            <span style="color:#999;">Foto</span>
+                        </div>
+                        <div class="image-item-name">img_2032-jpg-mt867pnr-cgrk-opt.jpg</div>
+                        <div class="image-item-path">Geofísica (4:3)</div>
+                    </div>
+                    <div class="image-item">
+                        <div style="width:100%; height:100px; background:#ddd; display:flex; align-items:center; justify-content:center; border-radius:4px;">
+                            <span style="color:#999;">Fondo</span>
+                        </div>
+                        <div class="image-item-name">spt-patio-opt.jpg</div>
+                        <div class="image-item-path">Contacto</div>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 20px; margin-bottom: 10px; font-size: 16px; color: #12100D;">Logos de certificación</h3>
+                <div class="image-list">
+                    <div class="image-item">
+                        <div style="width:100%; height:100px; background:#ddd; display:flex; align-items:center; justify-content:center; border-radius:4px;">
+                            <span style="color:#999;">Logo</span>
+                        </div>
+                        <div class="image-item-name">inacal.png</div>
+                        <div class="image-item-path">Certificación</div>
+                    </div>
+                    <div class="image-item">
+                        <div style="width:100%; height:100px; background:#ddd; display:flex; align-items:center; justify-content:center; border-radius:4px;">
+                            <span style="color:#999;">Logo</span>
+                        </div>
+                        <div class="image-item-name">iso17025.png</div>
+                        <div class="image-item-path">Certificación</div>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 20px; margin-bottom: 10px; font-size: 16px; color: #12100D;">Logos de clientes</h3>
+                <p style="font-size: 13px; color: #666; margin-bottom: 10px;">Ubicación: <code>public/brochure/img/clientes/</code></p>
+                <div class="image-list">
+                    <div class="image-item"><div class="image-item-name">grc.png</div></div>
+                    <div class="image-item"><div class="image-item-name">provias.png</div></div>
+                    <div class="image-item"><div class="image-item-name">apurimac.png</div></div>
+                    <div class="image-item"><div class="image-item-name">pescs.png</div></div>
+                    <div class="image-item"><div class="image-item-name">madrededios.png</div></div>
+                    <div class="image-item"><div class="image-item-name">ima.png</div></div>
+                    <div class="image-item"><div class="image-item-name">copesco.png</div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: GUÍA -->
+        <div id="guia" class="tab-content">
+            <div class="section">
+                <h2>📖 GUÍA RÁPIDA DE EDICIÓN</h2>
+
+                <h3 style="margin-top: 20px; margin-bottom: 10px; font-size: 16px; color: #12100D;">Paso 1: Prepara tus imágenes</h3>
+                <p style="color: #666; margin-bottom: 10px;">
+                    Reemplaza las imágenes en <code>public/brochure/img/</code> con tus propias imágenes.
+                    <strong>Mantén los mismos nombres de archivo</strong>.
+                </p>
+                <div class="info-box">
+                    Recomendaciones de imagen:
+                    <br>• Imágenes de fondo: Alto contraste para legibilidad de texto
+                    <br>• Imágenes de perfil: Aspecto 4:3 o 3:4 según la sección
+                    <br>• Logos: PNG transparente preferiblemente
+                    <br>• Resolución: 72-96 DPI es suficiente para web
+                </div>
+
+                <h3 style="margin-top: 20px; margin-bottom: 10px; font-size: 16px; color: #12100D;">Paso 2: Abre el editor de código</h3>
+                <p style="color: #666; margin-bottom: 10px;">
+                    Abre el archivo en tu editor favorito:
+                </p>
+                <div class="code-block">
+📁 public/brochure/index.html
+                </div>
+                <div style="margin-top: 10px; color: #666; font-size: 13px;">
+                    Puedes usar: VS Code, Sublime Text, Notepad++, o cualquier editor de texto
+                </div>
+
+                <h3 style="margin-top: 20px; margin-bottom: 10px; font-size: 16px; color: #12100D;">Paso 3: Busca y reemplaza</h3>
+                <p style="color: #666; margin-bottom: 10px;">
+                    Usa Ctrl+F (Buscar) en tu editor para encontrar los textos que quieres cambiar:
+                </p>
+                <div class="code-block">
+Ejemplo: Busca "CUSCO · PERÚ · DESDE 2011"
+Reemplaza por: "TU_CIUDAD · TU_PAÍS · DESDE TU_AÑO"
+                </div>
+
+                <h3 style="margin-top: 20px; margin-bottom: 10px; font-size: 16px; color: #12100D;">Colores principales (opcional)</h3>
+                <p style="color: #666; margin-bottom: 10px;">
+                    Si quieres cambiar los colores, busca estos códigos:
+                </p>
+                <div class="code-block">
+#12100D  = Fondo oscuro (negro)
+#EDE7DB  = Texto claro (beige)
+#7FCF52  = Verde principal (acento)
+#4FA83A  = Verde oscuro
+                </div>
+
+                <h3 style="margin-top: 20px; margin-bottom: 10px; font-size: 16px; color: #12100D;">Paso 4: Guarda y visualiza</h3>
+                <p style="color: #666; margin-bottom: 10px;">
+                    1. Guarda el archivo (Ctrl+S)<br>
+                    2. Recarga el navegador (F5)<br>
+                    3. ¡Verás tus cambios!
+                </p>
+
+                <div class="alert alert-success" style="margin-top: 20px;">
+                    ✅ <strong>¡Listo!</strong> Tu brochure actualizado y con el diseño intacto.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function switchTab(tabName) {
+            // Ocultar todos los tabs
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Mostrar el tab seleccionado
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
