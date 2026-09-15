@@ -118,6 +118,24 @@ export function Hero() {
               Ver Servicios
             </Button>
           </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.5 }}
+            className="mt-10 flex flex-wrap items-center gap-4"
+          >
+            <img
+              src="/images/pro-ingema/certificaciones/inacal.png"
+              alt="Acreditación INACAL"
+              className="h-14 w-auto rounded-lg bg-white/95 p-2 object-contain shadow-sm sm:h-16"
+            />
+            <img
+              src="/images/pro-ingema/certificaciones/iso-17025.jpg"
+              alt="Certificación ISO/IEC 17025"
+              className="h-14 w-auto rounded-lg bg-white/95 p-2 object-contain shadow-sm sm:h-16"
+            />
+          </motion.div>
         </div>
       </Container>
 
